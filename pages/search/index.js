@@ -140,7 +140,7 @@ export async function getServerSideProps() {
     }
 
 
-    await scrape(`https://Chutlunds.com/s/`)
+    await scrape(`https://spangbang.com/s/`)
 
 
 

@@ -29,7 +29,7 @@ function Category_slider() {
     var array = shuffle(jsonData);
 
     return (
-        <div className='flex  overflow-x-scroll scrollbar-hide px-2 h-fit md:hidden'>
+        <div className='flex items-start space-x-3 text-[#5b5b5b] overflow-x-scroll scrollbar-hide px-2 h-fit md:hidden mt-4 mb-1'>
 
             {array.map(category => {
                 return (
