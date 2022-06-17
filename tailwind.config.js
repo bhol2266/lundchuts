@@ -22,14 +22,22 @@ module.exports = {
         '2xl':"1250px"
       },
       colors: {
-        'github': '#24292F'
+        'github': '#24292F',
+        "color":"#414a4c"
       },
       fontFamily: {
         body: ['Pushster'],
         footer: ['Inter'],
         theme:['Poppins'],
-        arial:['Arial']
-
+        arial:['Arial'],
+        manrope: ['Manrope'],
+        delius: ['Delius Unicase'],
+        inter: ['Inter'],
+        poppins: ['Poppins'],
+        DMsans: ['DM Sans'],
+        Opensans: ['Open Sans'],
+        SFuiDisplay: ['SF UI Display'],
+        Abhayalibre: ['Abhaya Libre'],
       }
     },
   },

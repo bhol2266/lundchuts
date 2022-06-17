@@ -23,7 +23,7 @@ function Videos({ data, title }) {
             {title &&
                 <Link href={`/${title.substring(0, title.indexOf('Porn')).trim().toLowerCase()}`}>
                     <a>
-                        <div className="flex justify-between border-2 border-red-400 rounded bg-red-500 m-1 p-2 px-3 mx-4 hover:bg-red-600  ">
+                        <div className="flex justify-between border-2 border-red-400 rounded bg-red-500 m-1 p-2 px-3 hover:bg-red-600  ">
                             <h1 className="text-2xl font-semibold" >{title}</h1>
                             <ChevronRightIcon className="icon" />
                         </div>
@@ -31,7 +31,7 @@ function Videos({ data, title }) {
                 </Link>
             }
 
-            <div className='grid grid-cols-2 p-1  gap-x-1  sm:pl-4 sm:pr-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
+            <div className='grid grid-cols-2 p-1  gap-x-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
             >
                 {
                     data.map(video => {

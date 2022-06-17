@@ -109,7 +109,7 @@ function Navbar() {
 
     return (
 
-        <div>
+        <div className='font-inter'>
 
             <div className="bg-red-500 p-2  shadow-md lg:hidden">
 
@@ -212,7 +212,7 @@ function Navbar() {
 
 
             </div>
-            <div className='flex justify-evenly items-center mb-1 bg-red-100 shadow-lg lg:hidden '>
+            <div className='flex justify-evenly items-center mb-1 bg-red-100 shadow-lg lg:hidden'>
 
                 <Link href='/'>
                     <a >
@@ -225,13 +225,13 @@ function Navbar() {
                         <p className='font-bold sm:text-xl text-green-900  text-center p-1 pr-6 hover:text-red-600  '>Catergories</p>
                     </a>
                 </Link>
-                
+
                 <Link href='/photo'>
                     <a >
                         <p className='font-bold sm:text-xl text-green-900  text-center p-1 pr-6 hover:text-red-600 '>Leaked Pictures</p>
                     </a>
                 </Link>
-            
+
 
 
 
@@ -240,11 +240,11 @@ function Navbar() {
 
             {/* Large Sreeen NavBar  */}
 
-            <div className='flex-col hidden lg:flex' >
+            <div className='flex-col hidden lg:flex ' >
 
 
                 {/* Navbar */}
-                <div className='flex items-center justify-between bg-red-500 pt-2 pb-2 '>
+                <div className=' flex items-center justify-between bg-red-500 pt-2 pb-2'>
 
                     <div className='flex items-center space-x-1 md:space-x-3 ' >
                         <Link href='/'>
@@ -283,30 +283,30 @@ function Navbar() {
                     </div>
 
 
-                    <div className='flex space-x-4 items-center  '>
+                    <div className='flex space-x-4 items-center justify-end font-theme'>
                         <form className=' flex items-center ' onSubmit={goSearch}>
 
-                            <input ref={searchInputref} className='flex-grow border-2 border-gray-300 rounded pl-2 h-10  ' type="text" placeholder='Search your favourite porn video...' />
+                            <input ref={searchInputref} className='w-[250px] flex-grow border-2 outline-none border-gray-300 rounded pl-2 h-10  text-sm' type="text" placeholder='Search your favourite porn video...' />
 
-                            <button type="submit" className='bg-red-800  hover:bg-red-900 text-white text-sm h-10  pl-4 pr-4 m-1 rounded '>Search</button>
+                            <button type="submit" className='ml-4 bg-red-800  hover:bg-red-900 text-white text-sm h-10  pl-4 pr-4 m-1 rounded '>Search</button>
 
                         </form>
-                        <button className='bg-black rounded text-yellow-500 h-10 pl-3 pr-3 text-xl hover:text-white'>
-                            Upload
-                        </button>
+                        <button  className='bg-red-800  hover:bg-red-900 text-white text-sm h-10  pl-4 pr-4 m-1 rounded '>Upload</button>
 
-                        <div >
+
+                        {/* <div >
                             <button className='p-1 pl-2 pr-2 border-2 border-black  rounded-l'>
                                 <SunIcon onClick={enableLightMode} className='h-8 w-8 text-white' />
                             </button>
-                            <button className='p-1 pl-2 pr-2 border-2 border-black  rounded-r'>                                            <MoonIcon onClick={enableDarkMode} className='h-8 w-8' />
+                            <button className='p-1 pl-2 pr-2 border-2 border-black  rounded-r'>
+                                <MoonIcon onClick={enableDarkMode} className='h-8 w-8' />
                             </button>
-                        </div>
+                        </div> */}
 
                         <div className='flex items-center '>
-                            <UserIcon className='h-8 w-8' />
-                            <p className=' m-2 border-2 rounded border-black  pl-2 pr-2 font-bold cursor-pointer hover:bg-red-800'>Login</p>
-                            <p className='m-1 border-2 rounded border-black  pl-2 pr-2 font-bold cursor-pointer hover:bg-red-800'>Register</p>
+                            {/* <UserIcon className='h-8 w-8' /> */}
+                            <p className=' m-2 rounded underline  pl-2 pr-2 font-bold cursor-pointer hover:text-blue-600'>Login</p>
+                            <p className='m-1 underline rounded   pl-2 pr-2 font-bold cursor-pointer hover:text-blue-600'>Register</p>
                         </div>
                     </div>
 
@@ -317,23 +317,23 @@ function Navbar() {
 
 
 
-                <div className='w-full bg-gray-800  items-center justify-around   flex mb-2 shadow-lg'>
+                <div className='w-full bg-red-100 text-green-900  items-center justify-around   flex mb-2 p-2 shadow-lg'>
                     {navigation.map(item => {
 
                         return (
                             <Link href={item.href} key={item.name}>
 
                                 <a>
-                                    <p key={item.name} className='text-xl font-semibold cursor-pointer p-1 text-white hover:text-yellow-400'>{item.name}</p>
+                                    <p key={item.name} className='text-xl font-semibold cursor-pointer p-1 hover:text-red-400'>{item.name}</p>
                                 </a>
                             </Link>
                         )
                     })}
 
 
-                    <a target="_blank" href="https://chaturbate.com/in/?tour=LQps&campaign=3v7pk&track=default&room=ukdevelopers" rel="noopener noreferrer">
+                    {/* <a target="_blank" href="https://chaturbate.com/in/?tour=LQps&campaign=3v7pk&track=default&room=ukdevelopers" rel="noopener noreferrer">
                         <p className='text-xl font-semibold cursor-pointer p-1 text-black hover:text-red-700'>Live Sex</p>
-                    </a>
+                    </a> */}
 
 
                 </div>

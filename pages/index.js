@@ -144,7 +144,7 @@ export default function Home({ video_collection, pages }) {
 
       <Category_slider />
 
-      <main className="flex ">
+      <main className="flex px-2">
         <Sidebar />
         <div>
           <p className="bg-yellow-100 rounded-lg border-2 border-gray-300 shadow-md p-2 mx-1">
