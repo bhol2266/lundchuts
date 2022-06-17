@@ -200,9 +200,9 @@ function Navbar() {
 
                 <div className={`p-1 ${searchBarVisibility}  transition ease-in-out delay-150 mt-2 `}>
 
-                    <form className=' w-full flex ' onSubmit={goSearch}>
+                    <form className=' w-full flex items-center' onSubmit={goSearch}>
 
-                        <input ref={searchInputref} className='flex-grow border-2 border-gray-300 rounded pl-2  ' type="text" placeholder='Search your favourite porn video...' />
+                        <input ref={searchInputref} className='flex-grow  outline-none text-inter text-sm border-gray-300 rounded pl-2  h-[35px]' type="text" placeholder='Search your favourite porn video...' />
 
                         <button type="submit" className='bg-red-800  hover:bg-red-900 text-white text-sm p-2 pl-4 pr-4 m-1 rounded '>Search</button>
 
@@ -317,7 +317,7 @@ function Navbar() {
 
 
 
-                <div className='w-full bg-red-100 text-green-900  items-center justify-around   flex mb-2 p-2 shadow-lg'>
+                <div className='w-full bg-red-100 text-green-900  items-center justify-around   flex mb-2 p-1 shadow-lg'>
                     {navigation.map(item => {
 
                         return (

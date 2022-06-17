@@ -46,9 +46,9 @@ function Search({ TrendingKeywords, PopularKeywords }) {
 
             <div className={`my-2  transition ease-in-out delay-150 mt-2 `}>
 
-                <form className=' w-full flex ' onSubmit={goSearch}>
+                <form className='w-full sm:w-[400px] lg:w-[600px] flex items-center' onSubmit={goSearch}>
 
-                    <input ref={searchInputref} className='flex-grow border-2 border-gray-400 rounded pl-2  ' type="text" placeholder='Search your favourite porn video...' />
+                    <input ref={searchInputref} className='shadow-lg mr-3 flex-grow  outline-none text-inter text-sm sm:text-md  border-gray-300 rounded pl-2  h-[35px]' type="text" placeholder='Search your favourite porn video...' />
 
                     <button type="submit" className='bg-red-800  hover:bg-red-900 text-white text-sm p-2 pl-4 pr-4 m-1 rounded '>Search</button>
 
@@ -140,7 +140,7 @@ export async function getServerSideProps() {
     }
 
 
-    await scrape(`https://spangbang.com/s/`)
+    await scrape(`https://spankbang.com/s/`)
 
 
 
