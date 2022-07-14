@@ -85,7 +85,7 @@ function VideoThumbnail({ details }) {
 
 
 
-                    <h2 className=" font-semibold text-sm sm:text-md  pl-1 pt-1 lg:pl-4  whitespace-nowrap overflow-hidden font-poppins text-gray-700 ">{video.TitleArray}</h2>
+                    <h2 className=" font-semibold text-sm sm:text-md  pl-1 pt-1 lg:pl-4  whitespace-nowrap overflow-hidden font-poppins text-gray-800 ">{video.TitleArray}</h2>
 
 
                     <div className="flex justify-start space-x-3 md:justify-start lg:space-x-6 

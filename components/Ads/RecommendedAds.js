@@ -4,7 +4,7 @@ import React from 'react'
 function RecommendedAds() {
     return (
         <div className='p-2'>
-            {/* <RecommendationWidget zoneId="4602458" /> */}
+            <RecommendationWidget zoneId="4602458" />
 
         </div>
     )
