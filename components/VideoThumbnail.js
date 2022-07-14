@@ -69,7 +69,7 @@ function VideoThumbnail({ details }) {
            
 
             <a href={`/video/${keyy}*${title}`} onClick={OnClickHandler} data-title={video.TitleArray} >
-                <div className={`mb-2 animate-fade flex   flex-col justify-center  cursor-pointer  shadow-md  border-2 rounded-lg overflow-hidden transform transition duration-150 bg-white  `}>
+                <div className={`mb-2 animate-fade flex  items-start  flex-col justify-center  cursor-pointer  shadow-md m-1 lg:m-2  rounded-lg overflow-hidden transform transition duration-150 bg-red-100  `}>
 
 
 
@@ -85,24 +85,24 @@ function VideoThumbnail({ details }) {
 
 
 
-                    <p className=" font-semibold text-sm sm:text-md  pl-1 pt-1  whitespace-nowrap overflow-hidden  ">{video.TitleArray}</p>
+                    <h2 className=" font-semibold text-sm sm:text-md  pl-1 pt-1 lg:pl-4  whitespace-nowrap overflow-hidden font-poppins text-gray-700 ">{video.TitleArray}</h2>
 
 
-                    <div className="flex justify-between  sm:scale-90 sm:justify-around lg:space-x-4 lg:justify-start
-                        overflow-hidden">
+                    <div className="flex justify-start space-x-3 md:justify-start lg:space-x-6 
+                        overflow-hidden w-full pl-1 pt-1 lg:pl-4 pb-2 font-arial ">
 
                         <div className="flex justify-center items-center ">
                             <ClockIcon className="icon text-red-500" />
-                            <p>{video.durationArray}</p>
+                            <p className='text-sm md:text-md text-gray-700'>{video.durationArray}</p>
                         </div>
-                        <div className="flex justify-center items-center ">
+                        {/* <div className="flex justify-center items-center ">
                             <EyeIcon className="icon text-yellow-400" />
-                            <p>{video.viewsArray}</p>
-                        </div>
+                            <p className='text-sm md:text-md'>{video.viewsArray}</p>
+                        </div> */}
 
                         <div className="flex justify-center items-center ">
                             <ThumbUpIcon className="icon text-green-500" />
-                            <p>{video.likedPercentArray}</p>
+                            <p className='text-sm md:text-md text-gray-700'>{video.likedPercentArray}</p>
                         </div>
 
 

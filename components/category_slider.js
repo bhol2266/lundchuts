@@ -19,7 +19,7 @@ function Category_slider() {
                     <Link href={`/category/${category.name.substring(0, category.name.indexOf('.png')).toLowerCase()}`} key={category.name} >
                         <a className='flex flex-col justify-center items-center mx-1'>
                             <div className='w-16'>
-                                <img className='shadow-md rounded-full object-cover aspect-square' src={category.url} alt='loading...'></img>
+                                <img className='shadow-md rounded-full object-cover aspect-square' src={category.url} alt={category.name.substring(0, category.name.indexOf('.png')).toUpperCase()}></img>
                             </div>
                             <h2 className='text-xs text-center font-theme font-semibold mt-1'>{category.name.substring(0, category.name.indexOf('.png')).toUpperCase()}</h2>
                         </a>

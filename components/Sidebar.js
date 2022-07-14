@@ -206,7 +206,7 @@ function Sidebar() {
             {categories.map(category => {
                 return (
 
-                    <p key={category.Title} onClick={() => { router.push(`/category/${category.Title.toLowerCase().trim()}`) }} className="w-44 text-md border-2 border-white hover:bg-red-600 rounded-md text-white  p-1 pl-4 pr-2 cursor-pointer bg-black opacity-75">{category.Title}</p>
+                    <h2 key={category.Title} onClick={() => { router.push(`/category/${category.Title.toLowerCase().trim()}`) }} className="w-44 text-md border-2 border-white hover:bg-red-600 rounded-md text-white  p-1 pl-4 pr-2 cursor-pointer bg-black opacity-75">{category.Title}</h2>
 
                 )
             })}

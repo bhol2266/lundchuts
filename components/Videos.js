@@ -23,8 +23,8 @@ function Videos({ data, title }) {
             {title &&
                 <Link href={`/${title.substring(0, title.indexOf('Porn')).trim().toLowerCase()}`}>
                     <a>
-                        <div className="flex justify-between border-2 border-red-400 rounded bg-red-500 m-1 p-2 px-3 hover:bg-red-600  ">
-                            <h1 className="text-2xl font-semibold" >{title}</h1>
+                        <div className="flex justify-between items-center  rounded bg-red-500 m-1 p-2 px-3 ml-2  hover:bg-red-600  lg:w-3/4 lg:mx-auto lg:px-8">
+                            <h2 className="lg:text-2xl text-lg  text-gray-800 font-arial " >{title}</h2>
                             <ChevronRightIcon className="icon" />
                         </div>
                     </a>
