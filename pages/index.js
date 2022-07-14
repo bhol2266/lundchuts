@@ -106,14 +106,13 @@ export default function Home({ video_collection, pages }) {
   return (
     <div >
       <Head>
-        <title>Free HD Porn Videos - Full High Definition Movies | Chutlunds</title>
+        <title>Desi sex videos - full hd indian sex videos download</title>
+        <meta name="description" content="desi porn, desi mms, indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai" />
         <meta name='asg_verification' content='vVcWCcbbgmnqv221hpAjPojb' />
         <meta name="exoclick-site-verification" content="6b1112fe173bdf782d96975e70bd4b95"></meta>
         <link rel="icon" href="/favicon.ico" />
         <html lang='en' />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Watch Full HD Porn Videos for free. We have over 3,381,606 full length Hardcore HD Sex Movies in 720p, 1080p and 4K that you can watch online or download. " />
-
         <meta name="keywords" content="hindi porn, indian sex, Big Ass Ebony Solo, indian, Girlfriends" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free HD Porn Videos - Full High Definition Movies | Chutlunds" />
@@ -150,10 +149,6 @@ export default function Home({ video_collection, pages }) {
           <p className="bg-yellow-100 rounded-lg border-2 border-gray-300 shadow-md p-2 mx-1">
             Welcome to Chutlunds - the most comprehensive source of HD porn videos that you can currently find on the internet. Regardless of the XXX content that you prefer, you will surely find it all and loads more on Chutlund, the world&apos; s best porn tube site.
           </p>
-
-
-        
-
 
           <Videos data={video_collection[0].slice(0, 12)} title='Trending Porn Videos' />
           <Videos data={video_collection[1].slice(0, 12)} title='Upcoming Porn Videos' />
