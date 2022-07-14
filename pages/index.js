@@ -16,10 +16,10 @@ import Category from './category/[category]/page/[page]';
 import Category_slider from '../components/category_slider';
 
 export default function Home({ video_collection, pages }) {
- 
+
   const { setcurrentLocation } = useContext(videosContext);
 
- 
+
 
   useEffect(() => {
     async function fetchData() {
@@ -107,38 +107,12 @@ export default function Home({ video_collection, pages }) {
     <div >
       <Head>
         <title>Desi sex videos - full hd indian sex videos download</title>
-        <meta name="description" content="desi porn, desi mms, indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai" />
+        <meta name="description" content="Free desi sex videos, desi mms, Indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection." />
         <meta name='asg_verification' content='vVcWCcbbgmnqv221hpAjPojb' />
         <meta name="exoclick-site-verification" content="6b1112fe173bdf782d96975e70bd4b95"></meta>
         <link rel="icon" href="/favicon.ico" />
         <html lang='en' />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="keywords" content="hindi porn, indian sex, Big Ass Ebony Solo, indian, Girlfriends" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free HD Porn Videos - Full High Definition Movies | Chutlunds" />
-        <meta name="twitter:description"
-          content="Watch Full HD Porn Videos for free. We have over 3,381,606 full length Hardcore HD Sex Movies in 720p, 1080p and 4K that you can watch online or download. " />
-
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.chutlunds.live/" />
-        <meta property="og:title" content="Free HD Porn Videos - Full High Definition Movies | Chutlunds" />
-        <meta property="og:description"
-          content="Watch Full HD Porn Videos for free. We have over 3,381,606 full length Hardcore HD Sex Movies in 720p, 1080p and 4K that you can watch online or download. " />
-        <meta property="og:site_name" content="CHUTLUNDS.LIVE" />
-        <meta property="og:image" content="https://static-eu-cdn.eporner.com/oglogo.png" />
-        <meta name="twitter:image" content="https://static-eu-cdn.eporner.com/oglogo.png" />
-
-
-
-        <meta property="article:tag" content="hindi porn" />
-        <meta property="article:tag" content="indian sex" />
-        <meta property="article:tag" content="housewife" />
-        <meta property="article:tag" content="fingered" />
-        <meta property="article:tag" content="chubby" />
-        <meta property="article:tag" content="fucked" />
-        <meta property="article:tag" content="indian" />
-
-
       </Head>
 
       <Category_slider />
@@ -146,9 +120,9 @@ export default function Home({ video_collection, pages }) {
       <main className="flex px-2">
         <Sidebar />
         <div>
-          <p className="bg-yellow-100 rounded-lg border-2 border-gray-300 shadow-md p-2 mx-1">
-            Welcome to Chutlunds - the most comprehensive source of HD porn videos that you can currently find on the internet. Regardless of the XXX content that you prefer, you will surely find it all and loads more on Chutlund, the world&apos; s best porn tube site.
-          </p>
+          <h1 className="bg-yellow-100 rounded-lg border-2 border-gray-300 shadow-md p-2 mx-1">
+          Free desi sex videos, desi mms, Indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection. full hd indian sex videos download free.
+          </h1>
 
           <Videos data={video_collection[0].slice(0, 12)} title='Trending Porn Videos' />
           <Videos data={video_collection[1].slice(0, 12)} title='Upcoming Porn Videos' />
