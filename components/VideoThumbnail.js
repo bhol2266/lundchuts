@@ -16,17 +16,10 @@ import { useState } from 'react';
 
 function VideoThumbnail({ details }) {
 
-    var canPlay = 0;
 
     const video = details;
 
     const key = details.hrefArray.substring(details.hrefArray.indexOf('video/') + 6, details.hrefArray.length)
-    const video_id = key.substring(0, key.indexOf('/'))
-
-
-    const [ImageSrc] = useState(video.thumbnail);
-
-
     const [spinnerloader, setspinnerloader] = useState(false);
 
 
@@ -60,13 +53,13 @@ function VideoThumbnail({ details }) {
 
     }
 
-    var key_title =video.hrefArray.substring(video.hrefArray.indexOf('com/')+4,video.hrefArray.length)
-    var keyy =key_title.substring(0,key_title.indexOf('/video'))
-    var title =key_title.substring(key_title.indexOf('video/')+6,key_title.length)
+    var key_title = video.hrefArray.substring(video.hrefArray.indexOf('com/') + 4, video.hrefArray.length)
+    var keyy = key_title.substring(0, key_title.indexOf('/video'))
+    var title = key_title.substring(key_title.indexOf('video/') + 6, key_title.length)
 
     return (
         <div className="">
-           
+
 
             <a href={`/video/${keyy}*${title}`} onClick={OnClickHandler} data-title={video.TitleArray} >
                 <div className={`mb-2 animate-fade flex  items-start  flex-col justify-center  cursor-pointer  shadow-md  rounded-lg overflow-hidden transform transition duration-150 bg-red-100  `}>
@@ -74,7 +67,7 @@ function VideoThumbnail({ details }) {
 
 
                     <video
-                        className={`w-full aspect-video object-contain ${spinnerloader? "":""} lazy`}
+                        className={`w-full aspect-video object-contain ${spinnerloader ? "" : ""} lazy`}
                         onMouseOver={playMovie}
                         onMouseLeave={stopMovie}
                         src={video.previewVideoArray}
