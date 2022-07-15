@@ -20,29 +20,11 @@ function Index() {
 
         <div className="">
             <Head>
-                <title>Categories - Chutlunds: HD Porn Tube</title>
-                <meta name="robots" content="index, follow" />
-                <meta name="description"
-                    content="Free Full HD porn tube - HD quality videos and photos. Watch over 2,785,355 full length hd sex movies, download porn xxx videos, sex photos and more. " />
-
-                <meta name="rating" content="RTA-5042-1996-1400-1577-RTA" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-                <meta name="twitter:card" content="summary" />
-                <meta name="twitter:title" content="Categories - Chutlunds: HD Porn Tube" />
-                <meta name="twitter:description"
-                    content="Free Full HD porn tube - HD quality videos and photos. Watch over 2,785,355 full length hd sex movies, download porn xxx videos, sex photos and more. " />
-                <meta property="og:type" content="article" />
-                <meta property="og:url" content="https://www.Chutlunds.live/category/" />
-                <meta property="og:title" content="Categories - Chutlunds: HD Porn Tube" />
-                <meta property="og:description"
-                    content="Free Full HD porn tube - HD quality videos and photos. Watch over 2,785,355 full length hd sex movies, download porn xxx videos, sex photos and more. " />
-                <meta property="og:site_name" content="Chutlunds.live" />
-                <meta property="og:image" content="https://static-eu-cdn.eporner.com/oglogo.png" />
-                <meta name="twitter:image" content="https://static-eu-cdn.eporner.com/oglogo.png" />
-
-                <meta name="theme-color" content="#AE0000" />
-
+                <title>Categories | desi sex videos, desi mms</title>
+                <meta name="description" content="Free desi sex videos, desi mms, Indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection." />
+                <meta name='asg_verification' content='vVcWCcbbgmnqv221hpAjPojb' />
+                <meta name="exoclick-site-verification" content="6b1112fe173bdf782d96975e70bd4b95"></meta>
+                <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
             </Head>
             <div className='flex items-center p-2 m-1 justify-between bg-gray-200 rounded-lg border-2 border-gray-300 shadow-md'>
                 <h1 className='flex-grow text-3xl  ml-4'>Porn Categories</h1>

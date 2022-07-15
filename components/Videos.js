@@ -14,28 +14,6 @@ import {
 
 function Videos({ data, title }) {
 
-    const [dataCollection, setdataCollection] = useState([])
-
-    useEffect(() => {
-        let array = []
-        function checkImage(url, obj, lastIndex) {
-            var request = new XMLHttpRequest();
-            request.open("GET", url, true);
-            request.send();
-            request.onload = function () {
-                status = request.status;
-                if (request.status == 200) {
-                    array.push(obj)
-                    if (data.length - 1 === lastIndex) setdataCollection(array)
-                }
-            }
-        }
-
-        data.map((obj, lastIndex) => {
-            checkImage(obj.thumbnailArray, obj, lastIndex);
-        })
-
-    }, [])
 
 
 
@@ -57,7 +35,7 @@ function Videos({ data, title }) {
             <div className='grid grid-cols-2 p-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
             >
                 {
-                    dataCollection.map(video => {
+                    data.map(video => {
                         return (
                             <VideoThumbnail key={video.thumbnailArray} details={video} />
                         )
