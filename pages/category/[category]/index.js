@@ -110,8 +110,7 @@ export async function getStaticPaths() {
 
   const categories = [
     {
-      thumbnailImage: 'https://spankbang.com//static/desktop/Images/categories/ids/1.jpg',
-      Title: 'Amateur'
+      Title: 'VR'
     }
   ]
 
