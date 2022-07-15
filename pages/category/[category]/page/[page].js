@@ -104,6 +104,8 @@ function Category({ video_collection, pages }) {
 
 export default Category
 
+
+
 export async function getStaticPaths() {
 
     const categories = [
