@@ -118,7 +118,7 @@ export default function Home({ video_collection, pages }) {
       <main className="flex px-2">
         <Sidebar />
         <div>
-          <h1 className="   text-center text-sm md:text-lg border-t-[0.5px] lg:border-0 border-slate-300  shadow-xl p-2 mx-1 my-1 font-inter">
+          <h1 className="text-center text-sm md:text-lg border-t-[0.5px] lg:border-0 border-slate-300  shadow-xl p-2 mx-1 my-1 font-inter">
             Free desi sex videos, desi mms, Indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection. full hd indian sex videos download free.
           </h1>
 

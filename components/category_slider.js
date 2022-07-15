@@ -21,7 +21,7 @@ function Category_slider() {
                             <div className='w-16'>
                                 <img className='shadow-md rounded-full object-cover aspect-square' src={category.url} alt={category.name.substring(0, category.name.indexOf('.png')).toUpperCase()}></img>
                             </div>
-                            <h2 className='text-xs text-center font-theme font-semibold mt-1'>{category.name.substring(0, category.name.indexOf('.png')).toUpperCase()}</h2>
+                            <h2 className='text-xs text-center font-poppins text-gray-600 font-semibold mt-1'>{category.name.substring(0, category.name.indexOf('.png')).toUpperCase()}</h2>
                         </a>
                     </Link>
                 )

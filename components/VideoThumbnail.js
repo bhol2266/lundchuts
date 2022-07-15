@@ -69,7 +69,7 @@ function VideoThumbnail({ details }) {
            
 
             <a href={`/video/${keyy}*${title}`} onClick={OnClickHandler} data-title={video.TitleArray} >
-                <div className={`mb-2 animate-fade flex  items-start  flex-col justify-center  cursor-pointer  shadow-md m-1 lg:m-2  rounded-lg overflow-hidden transform transition duration-150 bg-red-100  `}>
+                <div className={`mb-2 animate-fade flex  items-start  flex-col justify-center  cursor-pointer  shadow-md  rounded-lg overflow-hidden transform transition duration-150 bg-red-100  `}>
 
 
 
@@ -85,7 +85,7 @@ function VideoThumbnail({ details }) {
 
 
 
-                    <h2 className=" font-semibold text-sm sm:text-md  pl-1 pt-1 lg:pl-4  whitespace-nowrap overflow-hidden font-poppins text-gray-800 ">{video.TitleArray}</h2>
+                    <h2 className=" text-sm sm:text-md  pl-1 pt-1 lg:pl-4  whitespace-nowrap overflow-hidden font-inter  text-gray-800 ">{video.TitleArray}</h2>
 
 
                     <div className="flex justify-start space-x-3 md:justify-start lg:space-x-6 
@@ -93,7 +93,7 @@ function VideoThumbnail({ details }) {
 
                         <div className="flex justify-center items-center ">
                             <ClockIcon className="icon text-red-500" />
-                            <p className='text-sm md:text-md text-gray-700'>{video.durationArray}</p>
+                            <p className='text-sm md:text-md text-gray-700 font-light font-inter'>{video.durationArray}</p>
                         </div>
                         {/* <div className="flex justify-center items-center ">
                             <EyeIcon className="icon text-yellow-400" />
@@ -102,7 +102,7 @@ function VideoThumbnail({ details }) {
 
                         <div className="flex justify-center items-center ">
                             <ThumbUpIcon className="icon text-green-500" />
-                            <p className='text-sm md:text-md text-gray-700'>{video.likedPercentArray}</p>
+                            <p className='text-sm md:text-md text-gray-700 font-light font-inter'>{video.likedPercentArray}</p>
                         </div>
 
 

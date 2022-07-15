@@ -121,7 +121,7 @@ function Navbar() {
                                 <div className='flex items-center space-x-1' >
 
                                     <Link href='/'>
-                                        <p className=' align-center text-center font-body text-3xl pl-1 pr-1 cursor-pointer lg:text-left lg:ml-6'>Chutlunds.live</p>
+                                        <p className=' align-center text-center font-SFuiDisplay  text-3xl pl-1 pr-1 cursor-pointer lg:text-left lg:ml-6'>Chutlunds.live</p>
                                     </Link>
                                     {location &&
                                         <div className='cursor-pointer' onClick={handleClickFlag}>
@@ -212,23 +212,23 @@ function Navbar() {
 
 
             </div>
-            <div className='flex justify-evenly items-center mb-1 bg-red-100 shadow-lg lg:hidden'>
+            <div className='flex justify-evenly items-center mb-1 bg-red-100 shadow-lg lg:hidden font-poppins'>
 
                 <Link href='/'>
                     <a >
-                        <p className='font-bold sm:text-xl text-green-900  text-center p-1 pr-6 hover:text-red-600  '>Home</p>
+                        <p className=' sm:text-xl text-gray-700  text-center p-1 pr-6 hover:text-red-600  '>Home</p>
                     </a>
                 </Link>
 
                 <Link href='/category'>
                     <a >
-                        <p className='font-bold sm:text-xl text-green-900  text-center p-1 pr-6 hover:text-red-600  '>Catergories</p>
+                        <p className=' sm:text-xl text-gray-700  text-center p-1 pr-6 hover:text-red-600  '>Catergories</p>
                     </a>
                 </Link>
 
                 <Link href='/photo'>
                     <a >
-                        <p className='font-bold sm:text-xl text-green-900  text-center p-1 pr-6 hover:text-red-600 '>Leaked Pictures</p>
+                        <p className=' sm:text-xl text-gray-700  text-center p-1 pr-6 hover:text-red-600 '>Leaked Pictures</p>
                     </a>
                 </Link>
 
@@ -246,11 +246,12 @@ function Navbar() {
                 {/* Navbar */}
                 <div className=' flex items-center justify-between bg-red-500 pt-2 pb-2'>
 
-                    <div className='flex items-center space-x-1 md:space-x-3 ' >
+                    <div className='flex items-center space-x-1 md:space-x-3  ml-2' >
+
+                        <img src='/android-chrome-96x96.png' alt="loading..." className='h-12' />
+
                         <Link href='/'>
-
-                            <p className=' align-center text-center font-body text-4xl cursor-pointer lg:text-left lg:ml-6'>Chutlunds.live</p>
-
+                            <p className=' align-center text-center font-SFuiDisplay  text-4xl cursor-pointer lg:text-left lg:ml-2'>Chutlunds.live</p>
                         </Link>
                         {location &&
 
@@ -266,6 +267,8 @@ function Navbar() {
                                 />
                             </div>
                         }
+
+
 
                         <a target="_blank" href={countryBlocked ? "https://go.xxxiijmp.com/?userId=9ea31ff27db3b7242eabcc2d26ac0eaf38f093c68528e70c2e7f5a72df55c42e" : "https://chaturbate.com/in/?tour=LQps&campaign=3v7pk&track=default&room=ukdevelopers"} rel="noopener noreferrer">
                             <div className='  flex  items-center 
@@ -291,7 +294,7 @@ function Navbar() {
                             <button type="submit" className='ml-4 bg-red-800  hover:bg-red-900 text-white text-sm h-10  pl-4 pr-4 m-1 rounded '>Search</button>
 
                         </form>
-                        <button  className='bg-red-800  hover:bg-red-900 text-white text-sm h-10  pl-4 pr-4 m-1 rounded '>Upload</button>
+                        <button className='bg-red-800  hover:bg-red-900 text-white text-sm h-10  pl-4 pr-4 m-1 rounded '>Upload</button>
 
 
                         {/* <div >
