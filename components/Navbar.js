@@ -212,7 +212,7 @@ function Navbar() {
 
 
             </div>
-            <div className='flex justify-evenly items-center mb-1 bg-red-100 shadow-lg lg:hidden font-poppins'>
+            <div className='flex justify-evenly items-center mb-1 bg-red-100 shadow-lg lg:hidden font-arial font-semibold'>
 
                 <Link href='/'>
                     <a >
