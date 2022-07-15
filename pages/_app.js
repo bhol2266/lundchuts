@@ -11,7 +11,7 @@ import NProgress from 'nprogress'
 
 function MyApp({ Component, pageProps }) {
 
-  Router.events.on("routeChangeStart", (ur=-0) => {
+  Router.events.on("routeChangeStart", (ur = -0) => {
     console.log('routeChangeStart');
     NProgress.start();
 
@@ -28,8 +28,13 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta name='asg_verification' content='vVcWCcbbgmnqv221hpAjPojb' />
         <meta name="exoclick-site-verification" content="6b1112fe173bdf782d96975e70bd4b95"></meta>
-         <link rel="icon" href="/favicon.ico" />
-        <meta name="hilltopads-site-verification" content="28c33bbf5c61164c74b2bdfcc2ff1d44bc9c45b5" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />  <meta name="hilltopads-site-verification" content="28c33bbf5c61164c74b2bdfcc2ff1d44bc9c45b5" />
       </Head>
 
       <VideoState>
