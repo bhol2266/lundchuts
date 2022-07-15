@@ -14,9 +14,6 @@ import {
 
 function Videos({ data, title }) {
 
-
-
-
     return (
         <div className="">
             <BannerAds />
