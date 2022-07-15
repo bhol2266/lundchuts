@@ -26,13 +26,15 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
         return pornstar.indexOf(element) === index;
     });
 
+
     const videoPlayerRef = useRef(null)
     const [screenshotlayoutToggle, setscreenshotlayoutToggle] = useState('hidden')
     const [PlusVisible, setPlusVisible] = useState('flex')
     const [MinusVisible, setMinusVisible] = useState('hidden')
     const [Quality, setQuality] = useState(preloaded_video_quality)
-    const [VideoSrc, setVideoSrc] = useState(videolink_qualities_screenshots.video_link)
+    const [VideoSrc, setVideoSrc] = useState(videolink_qualities_screenshots.default_video_src)
 
+    // console.log(videolink_qualities_screenshots.default_video_src+"   dd");
 
     const openScreenShotLayout = () => {
         if (screenshotlayoutToggle === 'flex') {
@@ -171,7 +173,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
                                                 return (
                                                     <Menu.Item key={quality} onClick={() => { menuItemOnClick(quality) }}>
                                                         {({ active }) => (
-                                                            <div className={`${quality===Quality ? "text-red-500":""} relative px-4 hover:bg-gray-300 `}>
+                                                            <div className={`${quality === Quality ? "text-red-500" : ""} relative px-4 hover:bg-gray-300 `}>
                                                                 <a
                                                                     href="#"
                                                                     className={classNames(
@@ -312,6 +314,8 @@ export async function getServerSideProps(context) {
 
     const scrape = async (body) => {
 
+        //Related Videos
+
         var thumbnailArray = []
         var TitleArray = []
         var durationArray = []
@@ -407,7 +411,7 @@ export async function getServerSideProps(context) {
     const scrape2 = async (url) => {
 
 
-        var video_link = ''
+        var default_video_src = ''
         var video_qualities_available_withURL = []
         var screenshotsArray = []
         var video_qualities_available = []
@@ -427,40 +431,50 @@ export async function getServerSideProps(context) {
 
 
         $('video source').each((i, el) => {
-
             const data = $(el).attr("src")
-            video_link = data
+            default_video_src = data
         })
-
 
         const cut1 = body.substring(body.indexOf('<main id="container">'), body.indexOf(`<main id="container">`) + 1000);
         const cut2 = cut1.substring(cut1.indexOf('var stream_data'), body.indexOf("mpd"));
-        const video_qualities_url_array = extractUrls(cut2)
+        let video_qualities_url_array = extractUrls(cut2)
 
-        if (video_link.includes("240p.mp4")) {
+        //remove unwanted urls from "video_qualities_url_array"
+        video_qualities_url_array = video_qualities_url_array.filter(url => {
+            if(url.includes("https://vdownload")){
+                return url
+            }
+        })
+
+
+        // Sometime the default_video_src is null in that case assinging second last url from "video_qualities_url_array"
+        if (default_video_src.length < 5) {
+            default_video_src = video_qualities_url_array[video_qualities_url_array.length - 2]
+        }
+
+        //Know which quality is set by default on spangbang website
+        if (default_video_src.includes("240p.mp4")) {
             preloaded_video_quality = "240p"
-
         }
-        if (video_link.includes("320p.mp4")) {
+        if (default_video_src.includes("320p.mp4")) {
             preloaded_video_quality = "320p"
-
         }
-        if (video_link.includes("480p.mp4")) {
+        if (default_video_src.includes("480p.mp4")) {
             preloaded_video_quality = "480p"
-
         }
-        if (video_link.includes("720p.mp4")) {
+        if (default_video_src.includes("720p.mp4")) {
             preloaded_video_quality = "720p"
-
         }
-        if (video_link.includes("1080p.mp4")) {
+        if (default_video_src.includes("1080p.mp4")) {
             preloaded_video_quality = "1080p"
-
         }
-        if (video_link.includes("4k.mp4")) {
+        if (default_video_src.includes("4k.mp4")) {
             preloaded_video_quality = "4k"
-
         }
+
+
+
+
 
         //Extract available video qualities
         for (let index = 0; index < video_qualities_url_array.length; index++) {
@@ -493,9 +507,13 @@ export async function getServerSideProps(context) {
 
         }
 
+
+        //This is just replacing quality query from default_video_src according to vailable qualities 
         for (let index = 0; index < video_qualities_available.length; index++) {
-            video_qualities_available_withURL.push(video_link.replace(preloaded_video_quality, video_qualities_available[index]))
+            video_qualities_available_withURL.push(default_video_src.replace(preloaded_video_quality, video_qualities_available[index]))
         }
+
+
 
 
         var sreenshots = []
@@ -577,7 +595,7 @@ export async function getServerSideProps(context) {
 
 
         finalDataArray = {
-            video_link: video_link,
+            default_video_src: default_video_src,
             video_qualities_available: video_qualities_available,
             video_qualities_available_withURL: video_qualities_available_withURL,
             screenshotsArray: screenshotsArray,
@@ -588,7 +606,7 @@ export async function getServerSideProps(context) {
 
 
     await scrape2(`https://spankbang.com/${keyy}/video/${title}`)
-    console.log(`https://spankbang.com/${keyy}/video/${title}`);
+    // console.log(`https://spankbang.com/${keyy}/video/${title}`);
 
 
 
