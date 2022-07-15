@@ -1,7 +1,6 @@
-import Link from 'next/link'
 import React from 'react'
 import { useRouter } from "next/router";
-
+import Link from 'next/link';
 
 function Sidebar() {
     const router = useRouter();
@@ -200,13 +199,16 @@ function Sidebar() {
             Title: 'VR'
         }
     ]
+   
 
     return (
         <div className='pt-1 hidden md:flex md:flex-col' >
             {categories.map(category => {
                 return (
 
-                    <h2 key={category.Title} onClick={() => { router.push(`/category/${category.Title.toLowerCase().trim()}`) }} className="w-44 text-md border-2 border-white hover:bg-red-600 rounded-md text-white  p-1 pl-4 pr-2 cursor-pointer bg-black opacity-75">{category.Title}</h2>
+                    <Link key={category.Title}  href={`/category/${category.Title.toLowerCase().trim()}`}>
+                        <h2  className="w-44 text-md border-2 border-white hover:bg-red-600 rounded-md text-white  p-1 pl-4 pr-2 cursor-pointer bg-black opacity-75">{category.Title}</h2>
+                    </Link>
 
                 )
             })}
