@@ -113,7 +113,7 @@ export default function Home({ video_collection, pages }) {
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       </Head>
 
-      {/* <Category_slider /> */}
+      <Category_slider />
 
       <main className="flex px-2">
         <Sidebar />
