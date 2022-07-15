@@ -78,11 +78,11 @@ function VideoThumbnail({ details }) {
 
 
 
-                    <h2 className=" text-sm sm:text-md  pl-1  lg:pl-4  whitespace-nowrap overflow-hidden font-inter  text-gray-800 ">{video.TitleArray}</h2>
+                    <h2 className=" text-sm sm:text-md lg:text-lg  pl-1  lg:pl-4 pt-[1px] md:pt-1  whitespace-nowrap overflow-hidden font-inter  text-gray-800 ">{video.TitleArray}</h2>
 
 
                     <div className="flex justify-start space-x-3 md:justify-start lg:space-x-6 
-                        overflow-hidden w-full pl-1 pt-1 lg:pl-4  font-arial ">
+                        overflow-hidden w-full pl-1 pt-[1px] md:pt-1 md:pb-2 lg:pl-4  font-arial ">
 
                         <div className="flex justify-center items-center ">
                             <ClockIcon className="icon text-red-500" />
