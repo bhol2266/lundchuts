@@ -20,7 +20,7 @@ function Index() {
 
     return (
 
-        <div className="">
+        <div className=" lg:w-11/12 mx-auto">
             <Head>
                 <title>Categories | desi sex videos, desi mms</title>
                 <meta name="description" content="Free desi sex videos, desi mms, Indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection." />
@@ -30,9 +30,9 @@ function Index() {
 
 
             <div className='flex items-center p-2 m-1 justify-between  rounded-lg  shadow-md'>
-                <h2 className='flex-grow text-3xl  ml-4 font-Dmsans'>Porn Categories</h2>
+                <h2 className='flex-grow text-3xl font-Dmsans'>Porn Categories</h2>
             </div>
-            <h1 className="text-center text-sm md:text-lg border-t-[0.5px] lg:border-0 border-slate-300  shadow-xl p-2 mx-1 my-1 font-inter">
+            <h1 className="text-center lg:text-left text-sm md:text-lg border-t-[0.5px] lg:border-0 border-slate-300  shadow-xl p-2 mx-1 my-1 font-inter">
                 Collections of free desi sex videos, desi mms, Indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection. full hd indian sex videos download free.
             </h1>
 

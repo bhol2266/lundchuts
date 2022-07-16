@@ -24,7 +24,7 @@ function Search({ TrendingKeywords, PopularKeywords }) {
 
 
     return (
-        <div className='m-4'>
+        <div className=" lg:w-11/12 mx-auto">
 
             <Head>
                 <title>Most popular and trending porn searches- Chutlunds</title>
@@ -43,14 +43,14 @@ function Search({ TrendingKeywords, PopularKeywords }) {
 
                 </form>
             </div>
-            <h1 className='text-lg font-bold md:text-2xl'>Most Popular and Trending Porn Searches</h1>
-            <h2 className='text-md font-semibold md:text-xl'>Trending porn searches</h2>
+            <h1 className='text-lg font-bold md:text-2xl font-poppins'>Most Popular and Trending Porn Searches</h1>
+            <h2 className='text-md font-semibold md:text-xl font-poppins text-red-700'>Trending porn searches</h2>
 
             <div className='my-2 flex flex-wrap '>
                 {TrendingKeywords.map(keyword => {
                     return (
                         <Link key={keyword} href={`/search/${keyword.trim().replace(/ /g, "+")}`}>
-                            <a className='m-1 mx-2 p-1 px-2 text-xs text-black bg-gray-300 rounded font-semibold hover:bg-red-700  font-poppins hover:text-white md:text-lg  '>
+                            <a className='my-1 mr-1.5 lg:mr-3 p-1 px-2 text-xs text-black bg-gray-300 rounded font-semibold hover:bg-red-700  font-poppins hover:text-white md:text-lg  '>
                                 {keyword}
                             </a>
                         </Link>
@@ -58,13 +58,13 @@ function Search({ TrendingKeywords, PopularKeywords }) {
                 })}
             </div>
 
-            <h2 className='text-md font-semibold md:text-xl'>Popular porn searches</h2>
+            <h2 className='text-md font-semibold md:text-xl font-poppins text-red-700'>Popular porn searches</h2>
 
-            <div className='my-2 flex flex-wrap'>
+            <div className='my-2 flex flex-wrap '>
                 {PopularKeywords.map(keyword => {
                     return (
                         <Link key={keyword} href={`/search/${keyword.trim().replace(/ /g, "+")}`}>
-                            <a className='m-1 mx-2 p-1 px-2 text-xs text-black bg-gray-300 rounded font-semibold hover:bg-red-700  font-poppins hover:text-white md:text-lg  '>
+                            <a className='my-1 mr-1.5 lg:mr-3 p-1 px-2 text-xs text-black bg-gray-300 rounded font-semibold hover:bg-red-700  font-poppins hover:text-white md:text-lg  '>
                                 {keyword}
                             </a>
                         </Link>

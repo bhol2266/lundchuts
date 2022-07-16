@@ -73,7 +73,7 @@ function Album({ dload_links, relatedAlbums }) {
 
     return (
 
-        <>
+        <div className=" lg:w-11/12 mx-auto">
             <Head>
                 <title>{photoAlbum.replace(/-/g, " ")}</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -132,7 +132,7 @@ function Album({ dload_links, relatedAlbums }) {
 
 
 
-        </>
+        </div>
     )
 }
 

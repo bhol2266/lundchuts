@@ -39,7 +39,7 @@ function Pics({ dload_links }) {
     })
 
     return (
-        <div>
+        <div className=" lg:w-11/12 mx-auto">
 
             <Head>
                 <title>Indian Nude Photos | Desi Scandals</title>

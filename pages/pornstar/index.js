@@ -142,7 +142,7 @@ function Index() {
 
     return (
 
-        <div className="">
+        <div className=" lg:w-11/12 mx-auto">
             <Head>
                 <title>free sunny leone sex videos, mia khalifa sex videos</title>
                 <meta name="description" content="Free sunny leone sex videos, mia khalifa sex videos, mia malkova sex videos, dani daniels sex videos, Indian college girls." />
@@ -150,28 +150,28 @@ function Index() {
 
 
 
-            <div className=' items-center p-2 m-1 justify-between bg-gray-200 rounded-lg shadow-lg'>
-                <h1 className='flex-grow text-lg  ml-4'>Free sunny leone sex videos, Lana Rhoades sex videos, Mia Khalifa, Abella Dange, Riley Rei, Brandi Love, Mia Malkova, Nicole Aniston, Adriana Chechik, Lisa Ann, Madison Ivy sex vidoes and many more pornstars.
+            <div className=' items-center p-2 m-1 justify-between bg-gray-100 rounded-lg shadow-lg'>
+                <h1 className='flex-grow text-lg'>Free sunny leone sex videos, Lana Rhoades sex videos, Mia Khalifa, Abella Dange, Riley Rei, Brandi Love, Mia Malkova, Nicole Aniston, Adriana Chechik, Lisa Ann, Madison Ivy sex vidoes and many more pornstars.
                 </h1>
 
             </div>
 
-            <h2 className='flex-grow text-lg  ml-4 font-semibold font-inter  my-2'>Trending Pornstars</h2>
+            <h2 className='flex-grow text-lg  m-1 p-2 font-semibold font-inter'>Trending Pornstars</h2>
 
 
-            <div className='flex mx-2 md:w-3/5 md:mx-auto'  >
-                <input className='focus:outline-none focus:ring focus:ring-red-300 flex-grow mr-1 font-inter rounded p-1 px-4  bg-slate-200' type='text' onChange={(event) => { onChangeHandler(event.target.value) }} placeholder='Search pornstar...'></input>
+            <div className='flex m-1 pr-2 md:w-3/5 md:mx-auto'  >
+                <input className='focus:outline-none flex-grow mr-1 font-inter rounded p-1 px-2  bg-slate-100' type='text' onChange={(event) => { onChangeHandler(event.target.value) }} placeholder='Search pornstar...'></input>
 
             </div>
 
-            <div className='m-1 mt-6 grid grid-cols-2 p-1 sm:grid-cols-3 gap-x-1  md:grid-cols-4 lg:grid-cols-5'>
+            <div className='m-1 mt-6 grid grid-cols-3 p-1 sm:grid-cols-3 gap-x-1  md:grid-cols-5 lg:grid-cols-6'>
                 {suggestedData.length != 0 && suggestedData.map(pornstar => {
                     const posrnstar_Code = pornstar.href.substring(1, pornstar.href.indexOf('/pornstar'))
                     return (
 
                         <Link key={pornstar.Name} href={`/pornstar/${posrnstar_Code}/${pornstar.Name.trim().toLowerCase().replace(/ /g, "+")}`}>
                             <a >
-                                <div className='relative flex  items-center justify-start ml-4 mb-2 ' >
+                            <div className='  relative m-1 sm:m-2  hover:scale-105 transform transition duration-150 ' >
                                     <img
                                         className={`object-cover w-full rounded  `}
                                         src={pornstar.thumbnail}
@@ -179,6 +179,9 @@ function Index() {
                                         loading='lazy'
                                     ></img>
 
+                                    <h2 className='rounded-b absolute text-sm lg:text-lg font-inter p-1 bottom-0 w-full text-center  z-10 text-white bg-transparent bg-black bg-opacity-50'>{pornstar.Name}</h2>
+
+                                    {/* 
                                     <div className='p-0.5 lg:p-1 md:space-y-1 items-center text-sm md:text-lg absolute bottom-0 bg-transparent bg-black bg-opacity-50 text-white right-0 left-0' >
                                         <h2 className='font-semibold ml-0.5 lg:ml-2  lg:text-[22px]' > {pornstar.Name}</h2>
                                         <div className='flex flex-row items-center justify-start '>
@@ -189,7 +192,7 @@ function Index() {
                                             <FilmIcon className='h-5 text-red-600' />
                                             <h2 className='ml-0.5 text-xs lg:text-[16px]' > {pornstar.numberofVideos}</h2>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </a>
                         </Link>

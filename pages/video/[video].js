@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import cheerio from 'cheerio';
 import extractUrls from "extract-urls";
-import { useRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import Videos from '../../components/Videos'
@@ -21,6 +21,8 @@ function classNames(...classes) {
 
 
 function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality, relatedVideos, pornstar, video_details }) {
+
+    const router = useRouter()
 
     let uniquePornstars = pornstar.filter((element, index) => {
         return pornstar.indexOf(element) === index;
@@ -101,7 +103,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
 
 
     return (
-        <>
+        <div className=" lg:w-11/12 mx-auto">
             <Head>
                 <title>{video_details.Title} | Chutlunds</title>
                 <meta name="description" content={`Free ${tagString} sex videos.`} />
@@ -111,13 +113,13 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
 
             {video_details.Title && <div>
 
-                <div className='flex pl-1 text-sm md:text-lg'>
+                <div className='flex pl-1 text-sm md:text-lg '>
 
-                    <div className='flex items-center space-x-1'>
+                    <div className='flex items-center mt-2 space-x-1 lg:space-x-2'>
                         <FilmIcon className='h-[20px] md:h-9 hover:scale-100 text-red-600' />
                         {videolink_qualities_screenshots.video_qualities_available.map(quality => {
                             return (
-                                <p key={quality} className='font-poppins pr-1 '>{quality}</p>
+                                <p key={quality} className='font-poppins pr-1'>{quality}</p>
 
                             )
                         })}
@@ -128,7 +130,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
 
 
 
-                <h1 className='text-md sm:text-lg font-semibold px-2 pt-1 text-wrap text-gray-700 md:text-2xl font-inter'>{video_details.Title}</h1>
+                <h1 className='text-md sm:text-lg font-semibold px-2 my-1 text-wrap text-gray-700 md:text-2xl font-inter'>{video_details.Title}</h1>
 
 
                 <div className='p-1  rounded overflow-hidden sm:cursor-pointer md:w-4/5'>
@@ -136,7 +138,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
                     <div className=' hover:brightness-75 group  relative shadow-2xl'>
 
 
-                        <video ref={videoPlayerRef} poster={video_details.thumbnail} autoPlay className={`w-full aspect-video object-contain`} width="1280" height="720" controls >
+                        <video ref={videoPlayerRef} poster={video_details.thumbnail} autoPlay className={`w-full aspect-video object-contain`} width="852" height="480 " controls >
                             <source src={VideoSrc} type="video/mp4" />
 
                         </video>
@@ -217,14 +219,14 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
                     </div>
 
                     {/* Tags */}
-                    <div className='p-1 flex flex-wrap mb-2'>
+                    <div className='ml-2 flex flex-wrap mb-2 '>
                         {
                             tags.map(key => {
                                 if (key.length >= 1) {
 
                                     return (
-                                        <a key={key} href={`/search/${key.trim()}**1`}>
-                                            <p className='text-xs md:text-sm ml-1 mt-1 cursor-pointer hover:bg-gray-900 rounded px-[5px] py-[2px]  font-inter text-white bg-gray-600'>{key}</p>
+                                        <a key={key} href={`/search/${key.trim()}`}>
+                                            <p className='text-xs md:text-sm mr-1  mt-1 cursor-pointer hover:bg-gray-900 rounded px-[5px] py-[2px]  font-inter text-white bg-gray-600'>{key}</p>
                                         </a>
                                     )
                                 }
@@ -232,13 +234,13 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
                         }
                     </div>
 
-                    {uniquePornstars.length >= 1 && <div className='flex items-center py-2'>
-                        <span className='font-semibold text-lg'>Pornstar:</span>
+                    {uniquePornstars.length >= 1 && <div className='flex items-center py-2 flex-wrap ml-2'>
+                        <span className='font-semibold text-lg '>Pornstar:</span>
                         {uniquePornstars.map(pornstars => {
                             return (
 
-                                <a key={pornstars}>
-                                    <p className='pl-1 pr-1 text-xs md:text-sm ml-1 mt-1 cursor-pointer font-inter rounded  '>
+                                <a key={pornstars} href={`/search/${pornstars.trim().replace(" ", "+")}`}>
+                                    <p className='hover:text-red-500 pl-1 pr-1 text-sm md:text-md ml-1 mt-1 cursor-pointer font-inter rounded  underline'>
                                         {pornstars}
                                     </p>
                                 </a>
@@ -253,7 +255,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
 
                     {/* ScreenShots  */}
 
-                    <div onClick={openScreenShotLayout} className='flex items-center  justify-between p-1  hover:bg-gray-300 bg-gray-200 rounded border-2  m-1 md:w-1/4 md:space-x-4'>
+                    <div onClick={openScreenShotLayout} className='pl-2 my-1 flex items-center  justify-between py-1  hover:bg-gray-300 bg-gray-100 rounded   md:w-1/4 md:space-x-4'>
 
                         <p className='font-inter font-semibold text-xl md:text-2xl text-center '>Screenshots</p>
                         <PlusIcon className={`icon hover:scale-100 ${PlusVisible}`} />
@@ -287,9 +289,9 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
 
 
 
-                <div className='flex p-1 px-3 space-x-2  items-center md:flex-row sm:justify-items-start'>
-                    <p className='font-semibold text-red-500 text-lg font-manrope'>Videos related to</p>
-                    <p className='font-semibold text-md pl-1 font-inter'>{video_details.Title}</p>
+                <div className='flex flex-col p-1 px-3 space-x-2  items-center md:flex-row sm:justify-items-start'>
+                    <p className='font-semibold text-red-500 text-[18px] lg:text-[24px] font-manrope'>Videos related to</p>
+                    <p className='font-semibold text-[15px] lg:text-[20px] pl-1 font-inter'>{video_details.Title}</p>
                 </div>
                 <Videos data={relatedVideos} />
             </div>
@@ -301,7 +303,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
             <RecommendedAds />
 
 
-        </>
+        </div>
 
     )
 }
