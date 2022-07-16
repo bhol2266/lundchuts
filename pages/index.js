@@ -187,7 +187,6 @@ export async function getStaticProps() {
 
       })
 
-      console.log(thumbnailArray);
 
 
       select('.video-item picture img').each((i, el) => {

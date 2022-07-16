@@ -218,14 +218,14 @@ export default function Header({ keyword, pageNumber, filteredObjsArrayProps }) 
     return (
 
         <div>
-            <div className='flex items-start md:pr-10 pt-2  sm:p-1 px-2 md:px-3'>
-                <SearchIcon className='icon text-red-500' />
+            <div className='flex items-center md:pr-10 pt-2  sm:p-1 px-2 md:px-3'>
+                {/* <SearchIcon className='icon text-red-500' /> */}
                 <div className='flex  '>
-                    <p className='text-xl md:2xl pl-1 pr-1 font-semibold flex-grow'>{currentPage === 'searchPage' ? "Search:" : "Category:"}</p>
-                    <p className='text-xl md:2xl pl-1 pr-1 font-bold text-green-900  '>{keyword.toUpperCase()}</p>
+                    {/* <p className='text-xl md:2xl pl-1 pr-1 font-semibold flex-grow'>{currentPage === 'searchPage' ? "Search:" : "Category:"}</p> */}
+                    <h1 className='text-xl md:text-2xl pl-1 pr-1 font-semibold text-red-900 font-inter my-1  '>{keyword} sex videos</h1>
 
                 </div>
-                <p className='text-xl  pl-1 pr-1 font-bold flex-grow  text-right text-green-900 '>{`PAGE-${pageNumber}`}</p>
+                <p className='text-md md:text-xl  pl-1 pr-1  flex-grow font-inter  text-right text-gray-900 '>{`Page-${pageNumber}`}</p>
             </div>
 
 
@@ -242,7 +242,7 @@ export default function Header({ keyword, pageNumber, filteredObjsArrayProps }) 
                         )
                     })}
                 </div>
-                <div className='flex items-center justify-center flex-wrap mb-1    space-x-1 space-y-1 sm:space-x-2'>
+                <div className='flex items-center justify-center flex-wrap mb-1    space-x-1 sm:space-x-2'>
 
                     <Menu as="div" className={` relative  text-left`}>
                         <div className=' w-fit'>
