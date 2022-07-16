@@ -22,9 +22,6 @@ function VideoThumbnail({ details }) {
     const key = details.hrefArray.substring(details.hrefArray.indexOf('video/') + 6, details.hrefArray.length)
     const [spinnerloader, setspinnerloader] = useState(false);
 
-    var key_title = video.hrefArray.substring(video.hrefArray.indexOf('com/') + 4, video.hrefArray.length)
-    var keyy = key_title.substring(0, key_title.indexOf('/video'))
-    var title = key_title.substring(key_title.indexOf('video/') + 6, key_title.length)
 
 
 
@@ -35,7 +32,7 @@ function VideoThumbnail({ details }) {
             likedPercent: video.likedPercentArray,
             thumbnail: video.thumbnailArray,
             views: video.viewsArray,
-            key: keyy
+
         }
 
         localStorage.setItem('videoplayer', JSON.stringify(object));
@@ -56,6 +53,9 @@ function VideoThumbnail({ details }) {
 
     }
 
+    var key_title = video.hrefArray.substring(video.hrefArray.indexOf('com/') + 4, video.hrefArray.length)
+    var keyy = key_title.substring(0, key_title.indexOf('/video'))
+    var title = key_title.substring(key_title.indexOf('video/') + 6, key_title.length)
 
     return (
         <div className="">

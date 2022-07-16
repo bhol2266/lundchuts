@@ -33,8 +33,14 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
     const [MinusVisible, setMinusVisible] = useState('hidden')
     const [Quality, setQuality] = useState(preloaded_video_quality)
     const [VideoSrc, setVideoSrc] = useState(videolink_qualities_screenshots.default_video_src)
+    const [tags, settags] = useState([]);
 
-    // console.log(videolink_qualities_screenshots.default_video_src+"   dd");
+    useEffect(() => {
+        let uniqarray = [...new Set(videolink_qualities_screenshots.tagsArray)];
+        settags(uniqarray)
+
+    }, []);
+
 
     const openScreenShotLayout = () => {
         if (screenshotlayoutToggle === 'flex') {
@@ -97,10 +103,10 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
                 <div className='flex pl-1 text-sm md:text-lg'>
 
                     <div className='flex items-center space-x-1'>
-                        <FilmIcon className='h-6 md:h-9 hover:scale-100 text-red-600' />
+                        <FilmIcon className='h-[20px] md:h-9 hover:scale-100 text-red-600' />
                         {videolink_qualities_screenshots.video_qualities_available.map(quality => {
                             return (
-                                <p key={quality} className=' font-bold pr-1'>{quality}</p>
+                                <p key={quality} className='font-poppins pr-1 '>{quality}</p>
 
                             )
                         })}
@@ -111,7 +117,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
 
 
 
-                <p className='text-md sm:text-lg font-bold p-1 px-2 text-wrap text-gray-700 md:text-2xl'>{video_details.Title}</p>
+                <h1 className='text-md sm:text-lg font-semibold px-2 pt-1 text-wrap text-gray-700 md:text-2xl font-inter'>{video_details.Title}</h1>
 
 
                 <div className='p-1 border-2 border-gray-200 rounded overflow-hidden sm:cursor-pointer md:w-4/5'>
@@ -202,12 +208,12 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
                     {/* Tags */}
                     <div className='p-1 flex flex-wrap'>
                         {
-                            videolink_qualities_screenshots.tagsArray.map(key => {
+                            tags.map(key => {
                                 if (key.length >= 1) {
 
                                     return (
                                         <a key={key} href={`/search/${key.trim()}**1`}>
-                                            <p className='pl-1 pr-1 text-xs md:text-sm ml-1 mt-1 cursor-pointer hover:bg-gray-300 rounded bg-yellow-100 border-gray-400 border-2'>{key}</p>
+                                            <p className='text-xs md:text-sm ml-1 mt-1 cursor-pointer hover:bg-gray-900 rounded px-[5px] py-[2px]  font-inter text-white bg-gray-600'>{key}</p>
                                         </a>
                                     )
                                 }
@@ -441,7 +447,7 @@ export async function getServerSideProps(context) {
 
         //remove unwanted urls from "video_qualities_url_array"
         video_qualities_url_array = video_qualities_url_array.filter(url => {
-            if(url.includes("https://vdownload")){
+            if (url.includes("https://vdownload")) {
                 return url
             }
         })
