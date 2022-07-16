@@ -232,7 +232,7 @@ export default function Header({ keyword, pageNumber, filteredObjsArrayProps }) 
             <div className='w-fit   md:flex sm:p-1 px-2   '>
 
                 {/* This filtered applied bar */}
-                <div className='flex items-center flex-wrap justify-start  space-y-1  space-x-2 pr-2 mb-2 md:mb-0   '>
+                <div className='flex items-center flex-wrap justify-start space-x-2 pr-2 mb-2 md:mb-0   '>
                     {Final_filteredArray.map(item => {
                         return (
                             <div key={item} onClick={() => { removefilter(item) }} className='border-2 pl-1  text-sm font-semibold hover:bg-red-200 cursor-pointer border-red-500 px-0.5 rounded flex items-center'>

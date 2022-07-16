@@ -51,8 +51,6 @@ function Category({ video_collection, pages, query, keyword, currentPage, filter
       <Head>
         <title>{keyword} sex videos - Free download | Chutlunds</title>
         <meta name="description" content={`${keyword} sex videos, ${keyword} porn videos, desi mms, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection.`}/>
-        <meta name='asg_verification' content='vVcWCcbbgmnqv221hpAjPojb' />
-        <meta name="exoclick-site-verification" content="6b1112fe173bdf782d96975e70bd4b95"></meta>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       </Head>
 

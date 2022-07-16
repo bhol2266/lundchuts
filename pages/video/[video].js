@@ -34,10 +34,23 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
     const [Quality, setQuality] = useState(preloaded_video_quality)
     const [VideoSrc, setVideoSrc] = useState(videolink_qualities_screenshots.default_video_src)
     const [tags, settags] = useState([]);
+    const [tagString, settagString] = useState('');
 
     useEffect(() => {
         let uniqarray = [...new Set(videolink_qualities_screenshots.tagsArray)];
         settags(uniqarray)
+
+
+        // Create single string of all tags using comma
+        let tagsString = ''
+        uniqarray.map((tag, index) => {
+            if (index === 0) {
+                tagsString = tag
+            } else {
+                tagsString = tagsString + ", " + tag
+            }
+        })
+        settagString(tagsString);
 
     }, []);
 
@@ -89,12 +102,10 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
 
     return (
         <>
-
             <Head>
-                <title>{video_details.Title}</title>
-
-                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
+                <title>{video_details.Title} | Chutlunds</title>
+                <meta name="description" content={`Free ${tagString} sex videos.`} />
+                <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
             </Head>
 
 
@@ -120,9 +131,9 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
                 <h1 className='text-md sm:text-lg font-semibold px-2 pt-1 text-wrap text-gray-700 md:text-2xl font-inter'>{video_details.Title}</h1>
 
 
-                <div className='p-1 border-2 border-gray-200 rounded overflow-hidden sm:cursor-pointer md:w-4/5'>
+                <div className='p-1  rounded overflow-hidden sm:cursor-pointer md:w-4/5'>
 
-                    <div className=' hover:brightness-75 group  relative'>
+                    <div className=' hover:brightness-75 group  relative shadow-2xl'>
 
 
                         <video ref={videoPlayerRef} poster={video_details.thumbnail} autoPlay className={`w-full aspect-video object-contain`} width="1280" height="720" controls >
@@ -206,7 +217,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
                     </div>
 
                     {/* Tags */}
-                    <div className='p-1 flex flex-wrap'>
+                    <div className='p-1 flex flex-wrap mb-2'>
                         {
                             tags.map(key => {
                                 if (key.length >= 1) {
@@ -227,7 +238,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
                             return (
 
                                 <a key={pornstars}>
-                                    <p className='pl-1 pr-1 text-xs md:text-sm ml-1 mt-1 cursor-pointer hover:bg-green-300 rounded bg-green-100 border-gray-400 border-2'>
+                                    <p className='pl-1 pr-1 text-xs md:text-sm ml-1 mt-1 cursor-pointer font-inter rounded  '>
                                         {pornstars}
                                     </p>
                                 </a>
@@ -242,9 +253,9 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
 
                     {/* ScreenShots  */}
 
-                    <div onClick={openScreenShotLayout} className='flex  justify-between p-1 hover:bg-gray-300 bg-gray-200 rounded border-2 border-gray-300 m-1 md:w-fit md:space-x-4'>
+                    <div onClick={openScreenShotLayout} className='flex items-center  justify-between p-1  hover:bg-gray-300 bg-gray-200 rounded border-2  m-1 md:w-1/4 md:space-x-4'>
 
-                        <p className='text-black font-bold text-2xl text-center '>Screenshots</p>
+                        <p className='font-inter font-semibold text-xl md:text-2xl text-center '>Screenshots</p>
                         <PlusIcon className={`icon hover:scale-100 ${PlusVisible}`} />
                         <MinusIcon className={`icon hover:scale-100 ${MinusVisible}`} />
 
@@ -276,9 +287,9 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
 
 
 
-                <div className='flex p-1 flex-col  items-center md:flex-row sm:justify-items-start'>
-                    <p className='font-bold text-red-500 text-lg'>Videos related to</p>
-                    <p className='font-bold text-lg pl-1'>{video_details.Title}</p>
+                <div className='flex p-1 px-3 space-x-2  items-center md:flex-row sm:justify-items-start'>
+                    <p className='font-semibold text-red-500 text-lg font-manrope'>Videos related to</p>
+                    <p className='font-semibold text-md pl-1 font-inter'>{video_details.Title}</p>
                 </div>
                 <Videos data={relatedVideos} />
             </div>

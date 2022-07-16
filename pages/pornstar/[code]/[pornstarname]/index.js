@@ -43,44 +43,31 @@ function Index({ video_collection, pages, pornstarInformation }) {
 
     return (
         <>
-            <Head>
-                <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-                <title>{`${pornstarname.toUpperCase().replace('+', " ").replace("+", " ")} Pornstar Porn Videos - Chutlunds`}</title>
-                <meta name="description"
-                    content={`Watch ${pornstarname.toUpperCase().replace('+', " ").replace("+", " ")} HD porn video`} />
-                <meta name="keywords"
-                    content="porn, xxx, streaming porn, HD porn, HD adult videos, HD pussy videos, sex movies, Chutlunds" />
-                <meta property="og:title" content={`${pornstarname.toUpperCase().replace('+', " ").replace("+", " ")} Pornstar Porn Videos - Chutlunds`} />
-                <meta property="og:image" content={imageURL} />
-                <meta property="og:url" content={`https://www.chutlunds.live/pornstar/${code}/${pornstarname.replace(/ /g, "+")}`} />
-                <meta property="og:description"
-                    content={`Watch ${pornstarname.toUpperCase()} HD porn video`} />
 
-                <meta name="RATING" content="RTA-5042-1996-1400-1577-RTA" />
-                <meta name="msvalidate.01" content="8214D727033ABAE57F12C69F30562622" />
-                <meta httpEquiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-                <meta name="author" content="Chutlunds" />
-                <meta name="twitter:domain" content="Chutlunds.live" />
-                <meta property="og:site_name" content="Chutlunds" />
+            <Head>
+                <title>{`${pornstarname.toUpperCase().replace('+', " ").replace("+", " ")} Porn Videos - Chutlunds`}</title>
+                <meta name="description"
+                    content={`Watch ${pornstarname.toUpperCase().replace('+', " ").replace("+", " ")} HD sex video`} />
             </Head>
 
-            <div className='flex'>
 
-                <Header keyword={pornstarname} pageNumber={currentPageNumberURL} code={code} />
+            <div className=''>
+
+                <Header keyword={pornstarname.replace("+", " ")} pageNumber={currentPageNumberURL} code={code} />
             </div>
             <div className="flex">
                 {/* <Sidebar /> */}
                 <div>
-                    <div className=' flex font-semibold  items-center justify-start  ml-4 m-2 ' >
+                    <div className=' flex font-semibold  items-center justify-start  md:ml-4 m-2 ' >
 
                         <img
-                            className={`object-cover w-44 h-56    rounded border-2 border-black  `}
+                            className={`object-cover w-44 h-56    rounded `}
                             src={imageURL}
-                            alt='loading...'
+                            alt={pornstarname}
                             loading='lazy'
                         ></img>
 
-                        <div className=' mx-2 flex flex-col justify-start' >
+                        <div className=' mx-4 font-inter flex flex-col mt-auto' >
 
                             <h2 className=' p-0.5  ' > {pornstarInformation.views}</h2>
                             <h2 className='p-0.5  ' > {pornstarInformation.videos}</h2>

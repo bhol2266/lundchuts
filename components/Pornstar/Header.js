@@ -14,7 +14,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Header({ keyword, pageNumber, filteredObjsArrayProps,code }) {
+export default function Header({ keyword, pageNumber, filteredObjsArrayProps, code }) {
 
     const context = useContext(videosContext);
     const { setSpinner, } = context;
@@ -199,20 +199,20 @@ export default function Header({ keyword, pageNumber, filteredObjsArrayProps,cod
     return (
 
         <div>
-            <div className='flex items-start md:pr-10 pt-2  sm:p-1 px-2 md:px-3'>
+
+            <div className='flex items-center md:pr-10 pt-2  sm:p-1 px-2 md:px-3 '>
                 <div className='flex  '>
-                    <p className='text-xl md:2xl pl-1 pr-1 font-semibold flex-grow'>Pornstar:</p>
-                    <p className='text-xl md:2xl pl-1 pr-1 font-bold text-green-900  '>{keyword.replace('+', " ").replace('+', " ").toUpperCase()}</p>
+                    <h1 className='text-xl md:text-2xl pl-1 pr-1 font-semibold text-red-900 font-inter my-1  '>{keyword} sex videos</h1>
 
                 </div>
-                <p className='text-xl  pl-1 pr-1 font-bold flex-grow  text-right text-green-900 '>{`PAGE-${pageNumber}`}</p>
+                <p className='text-md md:text-xl  pl-1 pr-1  flex-grow font-inter  text-right text-gray-900 '>{`Page-${pageNumber}`}</p>
             </div>
 
 
             <div className='w-fit   md:flex sm:p-1 px-2   '>
 
                 {/* This filtered applied bar */}
-                <div className='flex items-center flex-wrap justify-start  space-y-1  space-x-2 pr-2 mb-2 md:mb-0   '>
+                <div className='flex items-center flex-wrap justify-start    space-x-2 pr-2 mb-2 md:mb-0   '>
                     {Final_filteredArray.map(item => {
                         return (
                             <div key={item} onClick={() => { removefilter(item) }} className='border-2 pl-1  text-sm font-semibold hover:bg-red-200 cursor-pointer border-red-500 px-0.5 rounded flex items-center'>
@@ -222,7 +222,7 @@ export default function Header({ keyword, pageNumber, filteredObjsArrayProps,cod
                         )
                     })}
                 </div>
-                <div className='flex items-center justify-center flex-wrap mb-1    space-x-1 space-y-1 sm:space-x-2'>
+                <div className='flex items-center justify-center flex-wrap mb-1    space-x-1  sm:space-x-2'>
 
                     <Menu as="div" className={` relative  text-left`}>
                         <div className=' w-fit'>

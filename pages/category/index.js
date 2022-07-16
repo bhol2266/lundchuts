@@ -24,8 +24,6 @@ function Index() {
             <Head>
                 <title>Categories | desi sex videos, desi mms</title>
                 <meta name="description" content="Free desi sex videos, desi mms, Indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection." />
-                <meta name='asg_verification' content='vVcWCcbbgmnqv221hpAjPojb' />
-                <meta name="exoclick-site-verification" content="6b1112fe173bdf782d96975e70bd4b95"></meta>
                 <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
             </Head>
 

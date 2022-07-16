@@ -18,20 +18,12 @@ function Category({ video_collection, pages }) {
     return (
         <>
             <Head>
-                <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-                <title>{`${searchkey.toUpperCase()} ${page} Porn Videos - Chutlunds`}</title>
-                <meta name="description" content={`${searchkey.toUpperCase()} Porn Videos! - Chutlunds`} />
-                <meta name="keywords" content={searchkey.toUpperCase()} />
-                <meta property="og:title" content={`${searchkey.toUpperCase()} Porn Videos - Chutlunds`} />
-                <meta property="og:url" content={`https://www.chutlunds.live/search/boobs/${page}`} />
-                <meta property="og:description" content={`${searchkey.toUpperCase()} Porn Videos! - Chutlunds`} />
-                <meta name="RATING" content="RTA-5042-1996-1400-1577-RTA" />
-                <meta httpEquiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-                <meta name="author" content="Chutlunds" />
-                <meta name="twitter:domain" content="Chutlunds.live" />
-                <meta property="og:site_name" content="Chutlunds" />
+                <title>{`'${searchkey.toUpperCase().replace('+', " ").replace("+", " ")}' Porn Videos - ${currentPageNumberURL}`}</title>
+                <meta name="description"
+                    content={`Watch ${searchkey.toUpperCase().replace('+', " ").replace("+", " ")} HD sex video`} />
             </Head>
-            <Header keyword={searchkey} pageNumber={currentPageNumberURL} />
+
+            <Header keyword={searchkey.replace("+", " ")} pageNumber={currentPageNumberURL} />
             <div className="flex">
                 <Sidebar />
                 <Videos data={video_collection} />

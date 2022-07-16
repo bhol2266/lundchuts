@@ -32,27 +32,13 @@ function Index({ video_collection, pages }) {
         <>
 
             <Head>
-                <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-                <title>{`${pornstarname.toUpperCase().replace("+", " ").replace("+", " ")} Pornstar ${page} Porn Videos - Chutlunds`}</title>
+                <title>{`${pornstarname.toUpperCase().replace('+', " ").replace("+", " ")} Porn Videos - ${currentPageNumberURL}`}</title>
                 <meta name="description"
-                    content={`Watch ${pornstarname.toUpperCase().replace("+", " ").replace("+", " ")} HD porn video`} />
-                <meta name="keywords"
-                    content="porn, xxx, streaming porn, HD porn, HD adult videos, HD pussy videos, sex movies, Chutlunds" />
-                <meta property="og:title" content={`${pornstarname.toUpperCase().replace("+", " ").replace("+", " ")} Pornstar Page ${page} Porn Videos - Chutlunds`} />
-                <meta property="og:url" content={`https://www.chutlunds.live/pornstar/${code}/${pornstarname.toLowerCase().replace(/ /g, "+")}/page/${page}`} />
-                <meta property="og:description"
-                    content={`Watch ${pornstarname.toUpperCase().replace("+", " ").replace("+", " ")} HD porn video`} />
-
-                <meta name="RATING" content="RTA-5042-1996-1400-1577-RTA" />
-                <meta name="msvalidate.01" content="8214D727033ABAE57F12C69F30562622" />
-                <meta httpEquiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-                <meta name="author" content="Chutlunds" />
-                <meta name="twitter:domain" content="Chutlunds.live" />
-                <meta property="og:site_name" content="Chutlunds" />
+                    content={`Watch ${pornstarname.toUpperCase().replace('+', " ").replace("+", " ")} HD sex video`} />
             </Head>
 
 
-            <Header keyword={pornstarname.replace('+', ' ').toUpperCase()} pageNumber={currentPageNumberURL} />
+            <Header keyword={pornstarname.replace('+', ' ')} pageNumber={currentPageNumberURL} />
             <div className="flex">
                 <Sidebar />
                 <Videos data={video_collection} />
