@@ -31,31 +31,15 @@ function Category({ video_collection, pages }) {
 
   return (
     <>
+    
       <Head>
-        <title>{`${category.toUpperCase()} Porn Videos - Chutlunds`}</title>
-        <meta name="robots" content="index, follow" />
-        <meta name="description"
-          content={`Watch ${category.toUpperCase()} HD porn videos for free on Chutlunds.live. We have 56,446 full length hd movies with  ${category.toUpperCase()} in our database available for free streaming. `} />
-
-        <meta name="rating" content="RTA-5042-1996-1400-1577-RTA" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={`${category.toUpperCase()} Porn Videos - Chutlunds`} />
-        <meta name="twitter:description"
-          content={`Watch ${category.toUpperCase()} HD porn videos for free on Chutlunds.live. We have 56,446 full length hd movies with  ${category.toUpperCase()} in our database available for free streaming. `} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://www.chutlunds.live/category/${category.toUpperCase()}/`} />
-        <meta property="og:title" content={`${category.toUpperCase()} Porn Videos - Chutlunds`} />
-        <meta property="og:description"
-          content={`Watch ${category.toUpperCase()} HD porn videos for free on Chutlunds.live. We have 56,446 full length hd movies with  ${category.toUpperCase()} in our database available for free streaming. `} />
-        <meta property="og:site_name" content="Chutlunds.live" />
-        <meta property="og:image" content="https://static-eu-cdn.Chutlunds.live/oglogo.png" />
-        <meta name="twitter:image" content="https://static-eu-cdn.Chutlunds.live/oglogo.png" />
-
-        <meta name="theme-color" content="#AE0000" />
-
+        <title>{category} sex videos - Free download | Chutlunds</title>
+        <meta name="description" content={`${category} sex videos, ${category} porn videos, desi mms, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection.`}/>
+        <meta name='asg_verification' content='vVcWCcbbgmnqv221hpAjPojb' />
+        <meta name="exoclick-site-verification" content="6b1112fe173bdf782d96975e70bd4b95"></meta>
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       </Head>
+
       <Header keyword={category} pageNumber={currentPageNumberURL} />
       <div className="flex">
         <Sidebar />

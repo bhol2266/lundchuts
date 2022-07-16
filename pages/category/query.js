@@ -47,21 +47,13 @@ function Category({ video_collection, pages, query, keyword, currentPage, filter
   return (
 
     <>
+
       <Head>
+        <title>{keyword} sex videos - Free download | Chutlunds</title>
+        <meta name="description" content={`${keyword} sex videos, ${keyword} porn videos, desi mms, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection.`}/>
+        <meta name='asg_verification' content='vVcWCcbbgmnqv221hpAjPojb' />
+        <meta name="exoclick-site-verification" content="6b1112fe173bdf782d96975e70bd4b95"></meta>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>{`${keyword.toUpperCase()} HD Porn (Apr 2022) - ${keyword.toUpperCase()} Gangbang &amp; Sister Videos - Chutlunds`}</title>
-        <meta name="description" content={`${keyword.toUpperCase()} Porn Videos! - ${keyword.toUpperCase()} Gangbang, Sister, Rough Sex Porn - Chutlunds`} />
-        <meta name="keywords" content={`${keyword.toUpperCase()} Gangbang, Sister, Rough Sex`} />
-        <meta property="og:title" content={`${keyword.toUpperCase()} HD Porn (Apr 2022) - ${keyword.toUpperCase()} Gangbang &amp; Sister Videos - Chutlunds`} />
-       
-        <meta property="og:description" content={`${keyword.toUpperCase()} Porn Videos! - ${keyword.toUpperCase()} Gangbang, Sister, Rough Sex Porn - Chutlunds`} />
-        <meta name="RATING" content="RTA-5042-1996-1400-1577-RTA" />
-        <meta name="google-site-verification" content="Jg2WM71lJPuDrBOy8pxlRiE9o_UdZmweB2VoLUnhWLQ" />
-        <meta name="msvalidate.01" content="8214D727033ABAE57F12C69F30562622" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-        <meta name="author" content="Chutlunds" />
-        <meta name="twitter:domain" content="chutlunds.live" />
-        <meta property="og:site_name" content="chutlunds" />
       </Head>
 
       <div>
