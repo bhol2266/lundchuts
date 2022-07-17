@@ -53,14 +53,16 @@ function Album({ dload_links, relatedAlbums }) {
 
         return (
             <>
-                <div key={picData} onClick={() => { setBigImageURL(picData); setshowBigImage(true); scrollTop() }} className={` mb-2 animate-fade flex   flex-col justify-center  cursor-pointer  shadow-md  border-2 rounded-lg overflow-hidden	 md:hover:scale-105 transform transition duration-150 bg-white`}>
-                    <img
-                        loading="lazy"
-                        alt={"loading"}
-                        src={picData}
-                        height={1080}
-                        width={1920}
-                    ></img>
+                <div key={picData} className={` mb-2 animate-fade flex   flex-col justify-center  cursor-pointer  shadow-md  border-2 rounded-lg overflow-hidden	 md:hover:scale-105 transform transition duration-150 bg-white`}>
+                    <a target="_self" href={picData}> 
+                        <img
+                            loading="lazy"
+                            alt={"loading"}
+                            src={picData}
+                            height={1080}
+                            width={1920}
+                        ></img>
+                    </a>
                 </div>
 
 
@@ -104,9 +106,9 @@ function Album({ dload_links, relatedAlbums }) {
             <div className='flex flex-col'>
 
 
-                <h1 className={` font-semibold text-md sm:text-lg md:text-2xl text-center p-1 mx-4`}>{title}</h1>
+                <h1 className={` font-semibold text-md sm:text-lg md:text-2xl text-center p-1 mx-4 font-inter`}>{title}</h1>
 
-                <div className={`${!showBigImage ? "" : "hidden"} grid grid-cols-2 p-1 sm:grid-cols-1 gap-x-1  md:grid-cols-3 lg:grid-cols-4 space-x-2 space-y-4  `}>
+                <div className={`${!showBigImage ? "" : "hidden"} grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-3 lg:gap-4  md:grid-cols-5 lg:grid-cols-6`}>
 
                     {displaypics}
 
@@ -122,7 +124,7 @@ function Album({ dload_links, relatedAlbums }) {
 
 
                 <div className={`${!showBigImage ? "" : "hidden"}`}>
-                    <h2 className='m-1 text-2xl border-2 font-semibold border-gray-400 text-center mt-6 rounded'>Related Photos</h2>
+                    <h2 className='m-1 text-xl shadow-lg bg-red-500 text-white font-poppins text-center mt-6 rounded'>Related Photos</h2>
                     <div className={` grid grid-cols-2 p-1 sm:grid-cols-1 gap-x-1  md:grid-cols-3 lg:grid-cols-4 space-x-2 space-y-4`}>
                         {relatedPics}
                     </div>

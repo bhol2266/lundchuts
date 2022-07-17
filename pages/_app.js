@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }) {
       <VideoState>
 
         <Navbar />
-        <div className='lg:w-11/12 lg:mx-auto mt-1 md:mt-3  mx-2 md:mx-4'>
+        <div className='basicMargin'>
           <Component {...pageProps} />
         </div>
         <hr />

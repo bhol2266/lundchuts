@@ -39,11 +39,12 @@
         @apply font-bold p-1 text-xl mt-10
     }
      
-    .para
+    .basicMargin
     {
-        @apply pb-3
+        @apply lg:w-11/12 lg:mx-auto mt-1 md:mt-3  mx-2 md:mx-4
     }
      
+
  
 
     

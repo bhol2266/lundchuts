@@ -103,7 +103,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
 
 
     return (
-        <div className=" lg:w-11/12 mx-auto">
+        <div className="">
             <Head>
                 <title>{video_details.Title} | Chutlunds</title>
                 <meta name="description" content={`Free ${tagString} sex videos.`} />
