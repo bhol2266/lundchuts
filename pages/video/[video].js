@@ -253,7 +253,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
                         </div>
                         }
 
-                        <div onClick={openScreenShotLayout} className='my-1 flex items-center bg-red-500 text-white  justify-between py-0.5 px-2 pr-3  hover:bg-red-700  rounded cursor-pointer   md:w-1/4 md:space-x-4'>
+                        <div onClick={openScreenShotLayout} className='my-1 hidden lg:flex items-center bg-gray-600 text-white  justify-between py-0.5 px-2 pr-3  hover:bg-gray-700  rounded cursor-pointer   md:w-1/4 md:space-x-4'>
 
                             <p className='font-inter font-semibold text-lg md:text-2xl text-center px-3'>Screenshots</p>
                             <PlusIcon className={`icon hover:scale-100 ${PlusVisible}`} />
@@ -265,6 +265,14 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
 
 
                     {/* ScreenShots  */}
+
+                    <div onClick={openScreenShotLayout} className='my-1 lg:hidden flex items-center bg-gray-600 text-white  justify-between py-0.5 px-2 pr-3  hover:bg-gray-700  rounded cursor-pointer   md:w-1/4 md:space-x-4'>
+
+                        <p className='font-inter font-semibold text-lg md:text-2xl text-center px-3'>Screenshots</p>
+                        <PlusIcon className={`icon hover:scale-100 ${PlusVisible}`} />
+                        <MinusIcon className={`icon hover:scale-100 ${MinusVisible}`} />
+
+                    </div>
 
 
                     <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  ${screenshotlayoutToggle} `}>

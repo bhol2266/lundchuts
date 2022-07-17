@@ -108,7 +108,7 @@ function Album({ dload_links, relatedAlbums }) {
 
                 <h1 className={` font-semibold text-md sm:text-lg md:text-2xl text-center p-1 mx-4 font-inter`}>{title}</h1>
 
-                <div className={`${!showBigImage ? "" : "hidden"} grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-3 lg:gap-4  md:grid-cols-5 lg:grid-cols-6`}>
+                <div className={`${!showBigImage ? "" : "hidden"} grid grid-cols-2  gap-2 md:gap-3 lg:gap-4  md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5`}>
 
                     {displaypics}
 
