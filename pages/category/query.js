@@ -97,7 +97,7 @@ function Category({ video_collection, pages, query, keyword, currentPage, filter
 
       <RecommendedAds />
 
-    </>
+    </div>
   )
 }
 
