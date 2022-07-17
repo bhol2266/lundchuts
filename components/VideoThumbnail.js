@@ -62,7 +62,7 @@ function VideoThumbnail({ details }) {
 
 
             <a href={`/video/${keyy}*${title}`} onClick={OnClickHandler} data-title={video.TitleArray} >
-                <div className={`mb-2 animate-fade flex  items-start  flex-col justify-center  cursor-pointer  shadow-md  rounded-lg overflow-hidden transform transition duration-150 bg-red-100  `}>
+                <div className={`animate-fade flex  items-start  flex-col justify-center  cursor-pointer  shadow-md  rounded-lg overflow-hidden transform transition duration-150 bg-red-100  `}>
 
 
 

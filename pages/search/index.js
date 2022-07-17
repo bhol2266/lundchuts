@@ -24,7 +24,7 @@ function Search({ TrendingKeywords, PopularKeywords }) {
 
 
     return (
-        <div className=" lg:w-11/12 mx-auto">
+        <div className=" ">
 
             <Head>
                 <title>Most popular and trending porn searches- Chutlunds</title>

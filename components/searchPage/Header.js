@@ -24,7 +24,7 @@ export default function Header({ keyword, pageNumber, filteredObjsArrayProps }) 
     useEffect(() => {
         setcurrentPage(window.location.href.includes('/search/') ? "searchPage" : "categoryPage")
     }, [])
-    
+
 
 
     // This object is to display whats stuffs are filtered 
@@ -218,24 +218,21 @@ export default function Header({ keyword, pageNumber, filteredObjsArrayProps }) 
     return (
 
         <div>
-            <div className='flex items-center md:pr-10 pt-2  sm:p-1 px-2 md:px-3'>
-                {/* <SearchIcon className='icon text-red-500' /> */}
+            <div className='flex items-center md:pr-10 pt-2  sm:py-1'>
                 <div className='flex  '>
-                    {/* <p className='text-xl md:2xl pl-1 pr-1 font-semibold flex-grow'>{currentPage === 'searchPage' ? "Search:" : "Category:"}</p> */}
-                    <h1 className='text-xl md:text-2xl pl-1 pr-1 font-semibold text-red-900 font-inter my-1  '>{keyword} sex videos</h1>
-
+                    <h1 className='text-xl md:text-2xl  font-semibold text-red-900 font-inter my-1  '>{keyword} sex videos</h1>
                 </div>
-                <p className='text-md md:text-xl  pl-1 pr-1  flex-grow font-inter  text-right text-gray-900 '>{`Page-${pageNumber}`}</p>
+                <p className='text-md md:text-xl flex-grow font-inter  text-right text-gray-900 '>{`Page-${pageNumber}`}</p>
             </div>
 
 
-            <div className='w-fit   md:flex sm:p-1 px-2   '>
+            <div className='w-fit   md:flex sm:py-1 '>
 
                 {/* This filtered applied bar */}
                 <div className='flex items-center flex-wrap justify-start space-x-2 pr-2 mb-2 md:mb-0   '>
                     {Final_filteredArray.map(item => {
                         return (
-                            <div key={item} onClick={() => { removefilter(item) }} className='border-2 pl-1  text-sm font-semibold hover:bg-red-200 cursor-pointer border-red-500 px-0.5 rounded flex items-center'>
+                            <div key={item} onClick={() => { removefilter(item) }} className='border-2  text-sm font-semibold hover:bg-red-200 cursor-pointer border-red-500 rounded flex items-center'>
                                 <p >{item}</p>
                                 <XCircleIcon className='icon text-red-500' />
                             </div>

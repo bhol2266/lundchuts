@@ -12,7 +12,7 @@ function Category_slider() {
     var array = jsonData;
 
     return (
-        <div className='flex items-start space-x-3 text-color overflow-x-scroll scrollbar-hide px-2 h-fit md:hidden mt-4 mb-1'>
+        <div className='flex items-start space-x-3 text-color overflow-x-scroll scrollbar-hide md:hidden mt-4'>
 
             {array.map(category => {
                 return (

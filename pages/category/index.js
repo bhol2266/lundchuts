@@ -20,7 +20,7 @@ function Index() {
 
     return (
 
-        <div className=" lg:w-11/12 mx-auto">
+        <div className="mt-1 md:mt-3  mx-2 md:mx-4">
             <Head>
                 <title>Categories | desi sex videos, desi mms</title>
                 <meta name="description" content="Free desi sex videos, desi mms, Indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection." />
@@ -29,20 +29,20 @@ function Index() {
 
 
 
-            <div className='flex items-center p-2 m-1 justify-between  rounded-lg  shadow-md'>
-                <h2 className='flex-grow text-3xl font-Dmsans'>Porn Categories</h2>
+            <div className='flex items-center py-2 my-1 justify-between  rounded-lg'>
+                <h2 className='text-center lg:text-left  flex-grow text-3xl font-Dmsans'>Porn Categories</h2>
             </div>
-            <h1 className="text-center lg:text-left text-sm md:text-lg border-t-[0.5px] lg:border-0 border-slate-300  shadow-xl p-2 mx-1 my-1 font-inter">
+            <h1 className="text-center lg:text-left text-sm md:text-lg shadow-xl py-2 my-1 font-inter">
                 Collections of free desi sex videos, desi mms, Indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection. full hd indian sex videos download free.
             </h1>
 
             <BannerAds />
-            <div className={`grid grid-cols-3 p-1 sm:grid-cols-3 gap-x-1  md:grid-cols-4 lg:grid-cols-5`}>
+            <div className={`grid grid-cols-3 py-3 sm:grid-cols-3 gap-2 md:gap-3 lg:gap-4  md:grid-cols-4 lg:grid-cols-5`}>
                 {jsonData.map(category => {
                     return (
                         <Link key={category.name} href={`/category/${category.name.toLowerCase().trim().substring(0, category.name.indexOf('.png'))}`}>
                             <a >
-                                <div className='  relative m-1 sm:m-2  hover:scale-105 transform transition duration-150 rounded   aspect-box  ' >
+                                <div className='  relative hover:scale-105 transform transition duration-150 rounded   aspect-box  ' >
                                     <img
                                         className='object-cover w-full'
                                         alt={category.name}

@@ -142,7 +142,7 @@ function Index() {
 
     return (
 
-        <div className=" lg:w-11/12 mx-auto">
+        <div className="mt-1 md:mt-3  mx-2 md:mx-4">
             <Head>
                 <title>free sunny leone sex videos, mia khalifa sex videos</title>
                 <meta name="description" content="Free sunny leone sex videos, mia khalifa sex videos, mia malkova sex videos, dani daniels sex videos, Indian college girls." />
@@ -150,28 +150,28 @@ function Index() {
 
 
 
-            <div className=' items-center p-2 m-1 justify-between bg-gray-100 rounded-lg shadow-lg'>
+            <div className=' items-center p-2 my-1 justify-between bg-gray-100 rounded-lg shadow-lg'>
                 <h1 className='flex-grow text-lg'>Free sunny leone sex videos, Lana Rhoades sex videos, Mia Khalifa, Abella Dange, Riley Rei, Brandi Love, Mia Malkova, Nicole Aniston, Adriana Chechik, Lisa Ann, Madison Ivy sex vidoes and many more pornstars.
                 </h1>
 
             </div>
 
-            <h2 className='flex-grow text-lg  m-1 p-2 font-semibold font-inter'>Trending Pornstars</h2>
+            <h2 className='flex-grow text-lg  my-1 p-2 font-semibold font-inter'>Trending Pornstars</h2>
 
 
-            <div className='flex m-1 pr-2 md:w-3/5 md:mx-auto'  >
+            <div className='flex my-1 pr-2 md:w-3/5 md:mx-auto'  >
                 <input className='focus:outline-none flex-grow mr-1 font-inter rounded p-1 px-2  bg-slate-100' type='text' onChange={(event) => { onChangeHandler(event.target.value) }} placeholder='Search pornstar...'></input>
 
             </div>
 
-            <div className='m-1 mt-6 grid grid-cols-3 p-1 sm:grid-cols-3 gap-x-1  md:grid-cols-5 lg:grid-cols-6'>
+            <div className='my-1 mt-6 grid grid-cols-3 p-1 sm:grid-cols-3 gap-2 md:gap-3 lg:gap-4  md:grid-cols-5 lg:grid-cols-6'>
                 {suggestedData.length != 0 && suggestedData.map(pornstar => {
                     const posrnstar_Code = pornstar.href.substring(1, pornstar.href.indexOf('/pornstar'))
                     return (
 
                         <Link key={pornstar.Name} href={`/pornstar/${posrnstar_Code}/${pornstar.Name.trim().toLowerCase().replace(/ /g, "+")}`}>
                             <a >
-                            <div className='  relative m-1 sm:m-2  hover:scale-105 transform transition duration-150 ' >
+                            <div className='  relative hover:scale-105 transform transition duration-150 ' >
                                     <img
                                         className={`object-cover w-full rounded  `}
                                         src={pornstar.thumbnail}
@@ -222,14 +222,14 @@ function Index() {
                     hasMore={data.length !== 6500}
 
                 >
-                    <div className={`grid grid-cols-3 p-1 sm:grid-cols-3 gap-x-1  md:grid-cols-5 lg:grid-cols-6 ${imageLoaded ? '' : 'invisible'}`}>
+                    <div className={`grid grid-cols-3 p-1 sm:grid-cols-3 gap-2 md:gap-3 lg:gap-4  md:grid-cols-5 lg:grid-cols-6 ${imageLoaded ? '' : 'invisible'}`}>
                         {data.map(pornstar => {
 
                             const posrnstar_Code = pornstar.href.substring(1, pornstar.href.indexOf('/pornstar'))
                             return (
                                 <Link key={pornstar.Name} href={`/pornstar/${posrnstar_Code}/${pornstar.Name.trim().toLowerCase().replace(/ /g, "+")}`}>
                                     <a >
-                                        <div className='  relative m-1 sm:m-2  hover:scale-105 transform transition duration-150 ' >
+                                        <div className='  relative hover:scale-105 transform transition duration-150 ' >
                                             <img
                                                 className={`object-cover w-full rounded  `}
                                                 src={pornstar.thumbnail}

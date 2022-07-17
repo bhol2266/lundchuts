@@ -46,7 +46,7 @@ function Category({ video_collection, pages, query, keyword, currentPage, filter
   console.log(filteredObjsArray);
   return (
 
-    <>
+    <div className="mt-1 md:mt-3  mx-2 md:mx-4">
 
       <Head>
         <title>{keyword} sex videos - Free download | Chutlunds</title>
@@ -60,7 +60,6 @@ function Category({ video_collection, pages, query, keyword, currentPage, filter
         <div className="flex">
           <Sidebar />
           <Videos data={video_collection} />
-
         </div>
 
 

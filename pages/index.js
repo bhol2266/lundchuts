@@ -104,8 +104,8 @@ export default function Home({ video_collection, pages }) {
 
   // }
   return (
-    <div className=" lg:w-11/12 mx-auto">
-    <Head>
+    <div className=" mx-2 md:mx-4">
+      <Head>
         <title>Desi sex videos - full hd indian sex videos download</title>
         <meta name="description" content="Free desi sex videos, desi mms, Indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection." />
         <meta name='asg_verification' content='vVcWCcbbgmnqv221hpAjPojb' />
@@ -115,10 +115,10 @@ export default function Home({ video_collection, pages }) {
 
       <Category_slider />
 
-      <main className="flex space-x-3 mt-2">
+      <main className="flex  mt-1 md:mt-3 md:space-x-3">
         <Sidebar />
         <div>
-          <h1 className="lg:my-2 lg:text-lg text-center lg:text-left text-sm md:text-lg border-t-[0.5px] lg:border-0 border-slate-300  shadow-xl p-2 mx-1 my-1 font-inter">
+          <h1 className="lg:mb-3 mb-2 lg:text-lg text-center lg:text-left text-sm md:text-lg border-t-[0.5px] md:border-0 border-slate-300  shadow-xl px-1 pb-2 pt-2 md:pt-0 lg:py-0 font-inter">
             Free desi sex videos, desi mms, Indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection. full hd indian sex videos download free.
           </h1>
 

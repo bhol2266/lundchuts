@@ -202,7 +202,7 @@ function Sidebar() {
    
 
     return (
-        <div className='pt-1 hidden md:flex md:flex-col' >
+        <div className='hidden md:flex md:flex-col' >
             {categories.map(category => {
                 return (
 
