@@ -113,7 +113,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
 
             {video_details.Title && <div>
 
-                <div className='flex pl-1 text-sm md:text-lg '>
+                <div className='flex text-sm md:text-lg '>
 
                     <div className='flex items-center mt-2 space-x-1 lg:space-x-2'>
                         <FilmIcon className='h-[20px] md:h-9 hover:scale-100 text-red-600' />
@@ -130,10 +130,10 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
 
 
 
-                <h1 className='text-md sm:text-lg font-semibold px-2 my-1 text-wrap text-gray-700 md:text-2xl font-inter'>{video_details.Title}</h1>
+                <h1 className='text-md sm:text-lg font-semibold my-1 text-wrap text-gray-700 md:text-2xl font-inter'>{video_details.Title}</h1>
 
 
-                <div className='p-1  rounded overflow-hidden sm:cursor-pointer md:w-4/5'>
+                <div className='py-1  rounded overflow-hidden sm:cursor-pointer md:w-4/5'>
 
                     <div className=' hover:brightness-75 group  relative shadow-2xl'>
 
@@ -145,7 +145,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
 
                     </div>
 
-                    <div className="flex justify-between p-2 text-sm md:text-lg   ">
+                    <div className="flex justify-between py-2 text-sm md:text-lg   ">
 
 
 
@@ -219,7 +219,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
                     </div>
 
                     {/* Tags */}
-                    <div className='ml-2 flex flex-wrap mb-2 '>
+                    <div className='flex flex-wrap mb-2 '>
                         {
                             tags.map(key => {
                                 if (key.length >= 1) {
@@ -234,35 +234,40 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
                         }
                     </div>
 
-                    {uniquePornstars.length >= 1 && <div className='flex items-center py-2 flex-wrap ml-2'>
-                        <span className='font-semibold text-lg '>Pornstar:</span>
-                        {uniquePornstars.map(pornstars => {
-                            return (
+                    <div className='flex items-center justify-between'>
 
-                                <a key={pornstars} href={`/search/${pornstars.trim().replace(" ", "+")}`}>
-                                    <p className='hover:text-red-500 pl-1 pr-1 text-sm md:text-md ml-1 mt-1 cursor-pointer font-inter rounded  underline'>
-                                        {pornstars}
-                                    </p>
-                                </a>
+                        {uniquePornstars.length >= 1 && <div className='flex items-center py-2 flex-wrap'>
+                            <span className='font-semibold text-md '>Pornstar:</span>
+                            {uniquePornstars.map(pornstars => {
+                                return (
+
+                                    <a key={pornstars} href={`/search/${pornstars.trim().replace(" ", "+")}`}>
+                                        <p className='pl-1 pr-1 text-sm md:text-md ml-1 mt-1 bg-red-500 text-white cursor-pointer font-inter font-semibold rounded px-2 hover:bg-red-700'>
+                                            {pornstars}
+                                        </p>
+                                    </a>
 
 
-                            )
-                        })}
+                                )
+                            })}
+                        </div>
+                        }
+
+                        <div onClick={openScreenShotLayout} className='my-1 flex items-center bg-red-500 text-white  justify-between py-0.5 px-2 pr-3  hover:bg-red-700  rounded cursor-pointer   md:w-1/4 md:space-x-4'>
+
+                            <p className='font-inter font-semibold text-lg md:text-2xl text-center px-3'>Screenshots</p>
+                            <PlusIcon className={`icon hover:scale-100 ${PlusVisible}`} />
+                            <MinusIcon className={`icon hover:scale-100 ${MinusVisible}`} />
+
+                        </div>
+
                     </div>
-                    }
-
 
 
                     {/* ScreenShots  */}
 
-                    <div onClick={openScreenShotLayout} className='pl-2 my-1 flex items-center  justify-between py-1  hover:bg-gray-300 bg-gray-100 rounded   md:w-1/4 md:space-x-4'>
 
-                        <p className='font-inter font-semibold text-xl md:text-2xl text-center '>Screenshots</p>
-                        <PlusIcon className={`icon hover:scale-100 ${PlusVisible}`} />
-                        <MinusIcon className={`icon hover:scale-100 ${MinusVisible}`} />
-
-                    </div>
-                    <div className={`flex-wrap items-center justify-center md:justify-start  ${screenshotlayoutToggle} `}>
+                    <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  ${screenshotlayoutToggle} `}>
                         {videolink_qualities_screenshots.screenshotsArray.map(shot => {
                             return (
                                 <div onClick={() => { seekTimeOnclick(shot) }} className='p-1 relative' key={shot}>
@@ -271,8 +276,7 @@ function Videoplayer({ videolink_qualities_screenshots, preloaded_video_quality,
                                         alt='loading'
                                         src={shot.url}
                                         layout='fixed'
-                                        height={108}
-                                        width={192}
+
                                     ></img>
                                     <strong className='absolute bottom-0 right-0 text-white m-2 bg-transparent bg-black bg-opacity-50 text-sm '>{shot.seekTime}</strong>
                                 </div>
