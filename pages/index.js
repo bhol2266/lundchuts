@@ -104,7 +104,7 @@ export default function Home({ video_collection, pages }) {
 
   // }
   return (
-    <div className=" mx-2 md:mx-4">
+    <div className=" ">
       <Head>
         <title>Desi sex videos - full hd indian sex videos download</title>
         <meta name="description" content="Free desi sex videos, desi mms, Indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection." />

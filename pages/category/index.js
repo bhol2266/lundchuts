@@ -20,7 +20,7 @@ function Index() {
 
     return (
 
-        <div className="mt-1 md:mt-3  mx-2 md:mx-4">
+        <div className="">
             <Head>
                 <title>Categories | desi sex videos, desi mms</title>
                 <meta name="description" content="Free desi sex videos, desi mms, Indian sex videos, desi porn videos, devar bhabhi ki chudai, aunty ki chudai collection." />
