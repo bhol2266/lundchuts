@@ -47,6 +47,8 @@ export default function Home({ video_collection, pages }) {
     }
 
     fetchData()
+
+    fetch('/api/revalidate')
   }, []);
 
   // //Upload images to firebase storages
